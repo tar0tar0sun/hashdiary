@@ -41,7 +41,7 @@ class ViewController: UIViewController {
     
     //プロパティを指定
     @IBOutlet var calendarBar: UILabel!
-    @IBOutlet var prevMonthButton: UIButton
+    @IBOutlet var prevMonthButton: UIButton!
     @IBOutlet var nextMonthButton: UIButton!
     
     //カレンダーの位置決め用メンバ変数

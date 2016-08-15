@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4914FFE91D61A1280054970E /* CalculateCalendarLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4914FFE81D61A1280054970E /* CalculateCalendarLogic.swift */; };
 		4969C4EF1D5DA94D00782FE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4969C4EE1D5DA94D00782FE6 /* AppDelegate.swift */; };
 		4969C4F11D5DA94D00782FE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4969C4F01D5DA94D00782FE6 /* ViewController.swift */; };
 		4969C4F41D5DA94D00782FE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4969C4F21D5DA94D00782FE6 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4914FFE81D61A1280054970E /* CalculateCalendarLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculateCalendarLogic.swift; sourceTree = "<group>"; };
 		4969C4EB1D5DA94C00782FE6 /* hashDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hashDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4969C4EE1D5DA94D00782FE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4969C4F01D5DA94D00782FE6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				4969C4EE1D5DA94D00782FE6 /* AppDelegate.swift */,
+				4914FFE81D61A1280054970E /* CalculateCalendarLogic.swift */,
 				4969C4F01D5DA94D00782FE6 /* ViewController.swift */,
 				4969C51C1D5DB15600782FE6 /* DeviseSize.swift */,
 				4969C4F21D5DA94D00782FE6 /* Main.storyboard */,
@@ -267,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4969C4F11D5DA94D00782FE6 /* ViewController.swift in Sources */,
+				4914FFE91D61A1280054970E /* CalculateCalendarLogic.swift in Sources */,
 				4969C4EF1D5DA94D00782FE6 /* AppDelegate.swift in Sources */,
 				4969C51D1D5DB15600782FE6 /* DeviseSize.swift in Sources */,
 			);
@@ -503,6 +507,7 @@
 				4969C5151D5DA94D00782FE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4969C5161D5DA94D00782FE6 /* Build configuration list for PBXNativeTarget "hashDiaryTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +516,7 @@
 				4969C5181D5DA94D00782FE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4969C5191D5DA94D00782FE6 /* Build configuration list for PBXNativeTarget "hashDiaryUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +525,7 @@
 				4969C51B1D5DA94D00782FE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
