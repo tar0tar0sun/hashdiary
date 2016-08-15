@@ -1,13 +1,5 @@
 //
 //  ViewController.swift
-//  hashDiary
-//
-//  Created by 浅田真太郎 on 2016/08/12.
-//  Copyright © 2016年 浅田真太郎. All rights reserved.
-//
-
-//
-//  ViewController.swift
 //  handmadeCalenderSampleOfSwift
 //
 //  Created by 酒井文也 on 2014/11/29.
@@ -15,6 +7,7 @@
 //
 
 import UIKit
+
 
 //CALayerクラスのインポート
 import QuartzCore
@@ -181,6 +174,8 @@ class ViewController: UIViewController {
         
         //空の配列を作成する（カレンダーデータの格納用）
         mArray = NSMutableArray()
+        
+        
         
         //曜日ラベル初期定義
         let monthName:[String] = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]
@@ -447,9 +442,19 @@ class ViewController: UIViewController {
         
         //@todo:画面遷移等の処理を書くことができます。
         
+        
+        
+        let dayviewController = UIStoryboard(name: "Main",bundle: nil).instantiateViewControllerWithIdentifier("dayview")
+        
+        self.navigationController?.pushViewController(dayviewController, animated: true)
+        
+        
         //コンソール表示
         print("\(year)年\(month)月\(button.tag)日が選択されました！")
     }
+    
+    
+    
     
     //前の月のボタンを押した際のアクション
     @IBAction func getPrevMonthData(sender: UIButton) {

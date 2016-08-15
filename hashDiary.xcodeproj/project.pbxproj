@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4914FFE91D61A1280054970E /* CalculateCalendarLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4914FFE81D61A1280054970E /* CalculateCalendarLogic.swift */; };
+		49567E931D61A5C900C1F6CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49567E921D61A5C900C1F6CC /* Main.storyboard */; };
+		49567E951D61AD5800C1F6CC /* dayview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49567E941D61AD5800C1F6CC /* dayview.swift */; };
 		4969C4EF1D5DA94D00782FE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4969C4EE1D5DA94D00782FE6 /* AppDelegate.swift */; };
 		4969C4F11D5DA94D00782FE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4969C4F01D5DA94D00782FE6 /* ViewController.swift */; };
-		4969C4F41D5DA94D00782FE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4969C4F21D5DA94D00782FE6 /* Main.storyboard */; };
 		4969C4F61D5DA94D00782FE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4969C4F51D5DA94D00782FE6 /* Assets.xcassets */; };
 		4969C4F91D5DA94D00782FE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4969C4F71D5DA94D00782FE6 /* LaunchScreen.storyboard */; };
 		4969C5041D5DA94D00782FE6 /* hashDiaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4969C5031D5DA94D00782FE6 /* hashDiaryTests.swift */; };
@@ -38,10 +39,11 @@
 
 /* Begin PBXFileReference section */
 		4914FFE81D61A1280054970E /* CalculateCalendarLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculateCalendarLogic.swift; sourceTree = "<group>"; };
+		49567E921D61A5C900C1F6CC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		49567E941D61AD5800C1F6CC /* dayview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dayview.swift; sourceTree = "<group>"; };
 		4969C4EB1D5DA94C00782FE6 /* hashDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hashDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4969C4EE1D5DA94D00782FE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4969C4F01D5DA94D00782FE6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4969C4F31D5DA94D00782FE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4969C4F51D5DA94D00782FE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4969C4F81D5DA94D00782FE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4969C4FA1D5DA94D00782FE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -109,7 +111,8 @@
 				4914FFE81D61A1280054970E /* CalculateCalendarLogic.swift */,
 				4969C4F01D5DA94D00782FE6 /* ViewController.swift */,
 				4969C51C1D5DB15600782FE6 /* DeviseSize.swift */,
-				4969C4F21D5DA94D00782FE6 /* Main.storyboard */,
+				49567E941D61AD5800C1F6CC /* dayview.swift */,
+				49567E921D61A5C900C1F6CC /* Main.storyboard */,
 				4969C4F51D5DA94D00782FE6 /* Assets.xcassets */,
 				4969C4F71D5DA94D00782FE6 /* LaunchScreen.storyboard */,
 				4969C4FA1D5DA94D00782FE6 /* Info.plist */,
@@ -242,9 +245,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49567E931D61A5C900C1F6CC /* Main.storyboard in Resources */,
 				4969C4F91D5DA94D00782FE6 /* LaunchScreen.storyboard in Resources */,
 				4969C4F61D5DA94D00782FE6 /* Assets.xcassets in Resources */,
-				4969C4F41D5DA94D00782FE6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +275,7 @@
 				4969C4F11D5DA94D00782FE6 /* ViewController.swift in Sources */,
 				4914FFE91D61A1280054970E /* CalculateCalendarLogic.swift in Sources */,
 				4969C4EF1D5DA94D00782FE6 /* AppDelegate.swift in Sources */,
+				49567E951D61AD5800C1F6CC /* dayview.swift in Sources */,
 				4969C51D1D5DB15600782FE6 /* DeviseSize.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,14 +312,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4969C4F21D5DA94D00782FE6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4969C4F31D5DA94D00782FE6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4969C4F71D5DA94D00782FE6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
