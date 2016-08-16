@@ -58,6 +58,7 @@ class ViewController: UIViewController {
         
         super.viewDidLoad()
         
+        
         //現在起動中のデバイスを取得（スクリーンの幅・高さ）
         let screenWidth  = DeviseSize.screenWidth()
         let screenHeight = DeviseSize.screenHeight()
@@ -441,10 +442,16 @@ class ViewController: UIViewController {
     func buttonTapped(button: UIButton) {
         
         //@todo:画面遷移等の処理を書くことができます。
+        let dayviewController = UIStoryboard(name: "Main",bundle: nil).instantiateViewControllerWithIdentifier("dayview") as! dayViewController
+        
+        var df = NSDateFormatter()
+        
+        df.dateFormat = "yyyy/MM/dd"
+        
+        var datestr = df.dateFromString("\(year)/\(month)/\(button.tag)")
         
         
-        
-        let dayviewController = UIStoryboard(name: "Main",bundle: nil).instantiateViewControllerWithIdentifier("dayview")
+        dayviewController.selectedDate = datestr!
         
         self.navigationController?.pushViewController(dayviewController, animated: true)
         
