@@ -34,6 +34,37 @@ class dayViewController: UIViewController
         
         
     }
+    @IBAction func changeNextDate(sender: UIButton)
+    {
+        let cal = NSCalendar(identifier: NSCalendarIdentifierGregorian)!
+        
+        selectedDate = cal.dateByAddingUnit(.Day, value: +1, toDate: selectedDate, options: NSCalendarOptions())!
+        
+        var df = NSDateFormatter()
+        
+        df.dateFormat = "yyyy/MM/dd"
+        
+        var datestr = df.stringFromDate(selectedDate)
+        
+        celectedDateLabel.text = "\(datestr)"
+        
+    }
+   
+    @IBAction func changePreviousDate(sender: UIButton)
+    {
+        let cal = NSCalendar(identifier: NSCalendarIdentifierGregorian)!
+        
+        selectedDate = cal.dateByAddingUnit(.Day, value: -1, toDate: selectedDate, options: NSCalendarOptions())!
+   
+        var df = NSDateFormatter()
+        
+        df.dateFormat = "yyyy/MM/dd"
+        
+        var datestr = df.stringFromDate(selectedDate)
+        
+        celectedDateLabel.text = "\(datestr)"
+    
+    }
   
     @IBAction func swipe(sender: UISwipeGestureRecognizer)
     {
