@@ -9,9 +9,10 @@
 import UIKit
 
 
-class dayViewController: UIViewController
+class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDelegate
 {
     @IBOutlet weak var celectedDateLabel: UILabel!
+    @IBOutlet weak var myTableView: UITableView!
     
     //今日の日付を表示
     var selectedDate = NSDate()
@@ -32,8 +33,8 @@ class dayViewController: UIViewController
         
         celectedDateLabel.text = "\(datestr)"
         
-        
     }
+    
     @IBAction func changeNextDate(sender: UIButton)
     {
         let cal = NSCalendar(identifier: NSCalendarIdentifierGregorian)!
@@ -71,7 +72,17 @@ class dayViewController: UIViewController
         navigationController?.popViewControllerAnimated(true)
         print("スワイプしました")
     }
-
+ 
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        
+        return 3
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) ->
+        UITableViewCell {var cell = UITableViewCell(style: .Default, reuseIdentifier: "hashcell")
+            //cell.textLabel?.text = "文字列"
+            return cell
+    }
     
     override func didReceiveMemoryWarning()
     {
