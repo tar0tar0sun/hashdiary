@@ -17,7 +17,7 @@
 		4969C5041D5DA94D00782FE6 /* hashDiaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4969C5031D5DA94D00782FE6 /* hashDiaryTests.swift */; };
 		4969C50F1D5DA94D00782FE6 /* hashDiaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4969C50E1D5DA94D00782FE6 /* hashDiaryUITests.swift */; };
 		4969C51D1D5DB15600782FE6 /* DeviseSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4969C51C1D5DB15600782FE6 /* DeviseSize.swift */; };
-		4969C51F1D5DB16C00782FE6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4969C51E1D5DB16C00782FE6 /* QuartzCore.framework */; };
+		498FD5A51D65813F0012CE4B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 498FD5A41D65813F0012CE4B /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +54,7 @@
 		4969C50E1D5DA94D00782FE6 /* hashDiaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hashDiaryUITests.swift; sourceTree = "<group>"; };
 		4969C5101D5DA94D00782FE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4969C51C1D5DB15600782FE6 /* DeviseSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviseSize.swift; sourceTree = "<group>"; };
-		4969C51E1D5DB16C00782FE6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QuartzCore.framework; sourceTree = "<group>"; };
+		498FD5A41D65813F0012CE4B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4969C51F1D5DB16C00782FE6 /* QuartzCore.framework in Frameworks */,
+				498FD5A51D65813F0012CE4B /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +86,7 @@
 		4969C4E21D5DA94C00782FE6 = {
 			isa = PBXGroup;
 			children = (
-				4969C51E1D5DB16C00782FE6 /* QuartzCore.framework */,
+				498FD5A41D65813F0012CE4B /* QuartzCore.framework */,
 				4969C4ED1D5DA94C00782FE6 /* hashDiary */,
 				4969C5021D5DA94D00782FE6 /* hashDiaryTests */,
 				4969C50D1D5DA94D00782FE6 /* hashDiaryUITests */,
@@ -410,6 +410,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -418,6 +420,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shintaro-asada.hashDiary";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -425,6 +428,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -433,6 +438,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shintaro-asada.hashDiary";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
