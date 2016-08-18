@@ -101,7 +101,7 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) ->
-        UITableViewCell {var cell = UITableViewCell(style: .Default, reuseIdentifier: "hashcell")
+        UITableViewCell {var cell = tableView.dequeueReusableCellWithIdentifier("hashcell") as! hashTableViewCell
             //cell.textLabel?.text = "文字列"
             return cell
     }

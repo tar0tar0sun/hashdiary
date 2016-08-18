@@ -135,7 +135,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="hashcell" rowHeight="51" id="lqC-mN-3gd">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="hashcell" rowHeight="51" id="lqC-mN-3gd" customClass="hashTableViewCell" customModule="hashDiary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="51"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lqC-mN-3gd" id="R07-81-NHk">
@@ -158,6 +158,10 @@
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="contentHash" destination="LgU-N2-uxp" id="3h3-8m-Mgy"/>
+                                            <outlet property="contentText" destination="cTO-Pz-yPc" id="7TI-Mv-BL2"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
