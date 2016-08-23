@@ -15,6 +15,7 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
     @IBOutlet weak var celectedDateLabel: UILabel!
     @IBOutlet weak var myTableView: UITableView!
     @IBOutlet weak var diaryTitle: UITextField!
+    @IBOutlet weak var myCellView: UITableView!
     
     
     //今日の日付を表示
@@ -22,6 +23,9 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
     
     //日記のタイトル
     var diaryList = [["title1":"タイトル1","date":"2016-05-13"],["title1":"タイトル2","date":"2016-05-14"],["title1":"タイトル3","date":"2016-05-15"]]
+   //日記の内容の名前付け
+    var contentsHash = [["contents1":"タイトル1","date":"2016-05-13"],["contents2":"タイトル2","date":"2016-05-14"],["contents3":"タイトル3","date":"2016-05-15"]]
+    
     
        override func viewDidLoad()
     {
@@ -34,12 +38,23 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
        // var appDomain:String = NSBundle.mainBundle().bundleIdentifier!
         //myDefault.removePersistentDomainForName(appDomain)
 
+        //タイトル
         if (myDefault.objectForKey("diaryList") != nil)
         {
             //データ取り出し
             diaryList = myDefault.objectForKey("diaryList") as! [Dictionary]
         }
         print(diaryList)
+        
+        //内容
+        if (myDefault.objectForKey("contentsHash") != nil)
+        {
+            //データ取り出し
+            contentsHash = myDefault.objectForKey("contentsHash") as! [Dictionary]
+        }
+        print(contentsHash)
+
+        
         
         
         // NavigationBarを隠す処理
@@ -68,12 +83,23 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
             //titleの表示、データの数字と選んだ数字
             if (savedDate == datestr){diaryTitle.text = savedTitle}
         }
-        
-        
+    
+        //配列の個数だけ繰り返し表示(配列から辞書データを取り出す)
+        for dat in contentsHash
+        {
+            //stringは文字
+            var savedDate = dat["date"] as! String!
+            var savedTitle = dat["contents"] as! String!
+            
+            print("date[\(savedDate)] title[\(savedTitle)]")
+            
+        }
+
       
         
     }
     
+    //次画面
     @IBAction func changeNextDate(sender: UIButton)
     {
         let cal = NSCalendar(identifier: NSCalendarIdentifierGregorian)!
@@ -87,9 +113,9 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
         var datestr = df.stringFromDate(selectedDate)
         
         celectedDateLabel.text = "\(datestr)"
-        
     }
    
+    //次画面
     @IBAction func changePreviousDate(sender: UIButton)
     {
         let cal = NSCalendar(identifier: NSCalendarIdentifierGregorian)!
@@ -105,13 +131,15 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
         celectedDateLabel.text = "\(datestr)"
     
     }
-  
+    
+    //スワイプ効果
     @IBAction func swipe(sender: UISwipeGestureRecognizer)
     {
         navigationController?.popViewControllerAnimated(true)
         print("スワイプしました")
     }
  
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         
         return 2}
@@ -120,9 +148,10 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
         UITableViewCell {var cell = tableView.dequeueReusableCellWithIdentifier("hashcell") as! hashTableViewCell
             //cell.textLabel?.text = "文字列"
             return cell
-            
     }
     
+    
+    //保存ボタン
     @IBAction func saveBtn(sender: UIButton)
     {
         var i = 0
@@ -143,7 +172,6 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
             i++
             
             print("date[\(savedDate)] title[\(savedTitle)]")
-
         }
 
         
@@ -163,11 +191,7 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
 
 
     }
-    
-    
-    
-    
-    
+
     
     override func didReceiveMemoryWarning()
     {
