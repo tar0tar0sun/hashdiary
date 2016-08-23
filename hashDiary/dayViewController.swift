@@ -16,14 +16,14 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
     @IBOutlet weak var myTableView: UITableView!
     @IBOutlet weak var diaryTitle: UITextField!
     
+    
     //今日の日付を表示
     var selectedDate = NSDate()
     
     //日記のタイトル
     var diaryList = [["title1":"タイトル1","date":"2016-05-13"],["title1":"タイトル2","date":"2016-05-14"],["title1":"タイトル3","date":"2016-05-15"]]
     
-
-    override func viewDidLoad()
+       override func viewDidLoad()
     {
         super.viewDidLoad()
         
@@ -70,9 +70,6 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
         }
         
         
-        
-
-        
       
         
     }
@@ -117,13 +114,13 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
  
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         
-        return 3
-    }
+        return 2}
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) ->
         UITableViewCell {var cell = tableView.dequeueReusableCellWithIdentifier("hashcell") as! hashTableViewCell
             //cell.textLabel?.text = "文字列"
             return cell
+            
     }
     
     @IBAction func saveBtn(sender: UIButton)
@@ -146,9 +143,6 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
             i++
             
             print("date[\(savedDate)] title[\(savedTitle)]")
-            
-            
-            
 
         }
 
@@ -167,16 +161,8 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
         
         print("保存されました")
 
-        
+
     }
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
