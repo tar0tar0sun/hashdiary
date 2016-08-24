@@ -26,53 +26,6 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
    //日記の内容の名前付け
     var contentsHash = [["contents":"タイトル1","date":"2016-05-13"],["contents":"タイトル2","date":"2016-05-14"],["contents":"タイトル3","date":"2016-05-15"]]
     
-    //cellの削除ボタン追加
-    override func setEditing(editing: Bool, animated: Bool)
-    {
-        super.setEditing(editing, animated: animated)
-        
-        myTableView.setEditing(editing, animated: animated)
-    }
-    
-    func (myTableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [AnyObject]?
-    {
-        // 編集
-        let edit = UITableViewRowAction(style: .Normal, title: "Edit")
-        {
-            (action, indexPath) in
-            
-            self.itemArray[indexPath.row] += "!!"
-            self.swipeTable.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-        }
-        
-        edit.backgroundColor = UIColor.greenColor()
-        
-        // 削除
-        let del = UITableViewRowAction(style: .Default, title: "Delete")
-        {
-            (action, indexPath) in
-            
-            self.itemArray.removeAtIndex(indexPath.row)
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        }
-        
-        del.backgroundColor = UIColor.redColor()
-        
-        return [edit, del]
-    }
-    
-    
-    func myTableView(myTableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool
-    {
-        return true
-    }
-    
-    func myTableView(myTableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
-        let tmp = itemArray[sourceIndexPath.row]
-        itemArray.removeAtIndex(sourceIndexPath.row)
-        itemArray.insert(tmp, atIndex: destinationIndexPath.row)
-    }
-    
     // 編集操作に対応
     // ※スワイプで処理する場合、ここでは何もしないが関数は必要
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {

@@ -20,6 +20,7 @@ class hashTableViewCell: UITableViewCell,UITextFieldDelegate
         super.awakeFromNib()
         // Initialization code
         
+        
         //キーボードにボタン追加[hash]
         // ボタンビュー作成
         var myKeyboard = UIView(frame: CGRectMake(0, 0, 320, 40))
@@ -83,6 +84,18 @@ class hashTableViewCell: UITableViewCell,UITextFieldDelegate
         contentText.resignFirstResponder()
     }
 
-
+    func textFieldDidEndEditing(textField: UITextField)
+    {
+        if let cell = contentText.superview?.superview as? hashTableViewCell
+        {
+            
+            var tableView = cell.superview?.superview as! UITableView
+            let indexPath = tableView.indexPathForCell(cell)
+            
+            print(indexPath?.row)
+            
+            print(textField.text)
+        }
+    }
 
 }
