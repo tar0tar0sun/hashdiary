@@ -9,7 +9,7 @@
 import UIKit
 
 
-class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDelegate
+class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDelegate,UITextFieldDelegate
 {
     //名前つけて
     @IBOutlet weak var celectedDateLabel: UILabel!
@@ -22,14 +22,84 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
     var selectedDate = NSDate()
     
     //日記のタイトル
-    var diaryList = [["title1":"タイトル1","date":"2016-05-13"],["title1":"タイトル2","date":"2016-05-14"],["title1":"タイトル3","date":"2016-05-15"]]
+    var titleList = [["title":"タイトル1","date":"2016-05-13"],["title":"タイトル2","date":"2016-05-14"],["title":"タイトル3","date":"2016-05-15"]]
    //日記の内容の名前付け
-    var contentsHash = [["contents1":"タイトル1","date":"2016-05-13"],["contents2":"タイトル2","date":"2016-05-14"],["contents3":"タイトル3","date":"2016-05-15"]]
+    var contentsHash = [["contents":"タイトル1","date":"2016-05-13"],["contents":"タイトル2","date":"2016-05-14"],["contents":"タイトル3","date":"2016-05-15"]]
     
+    //cellの削除ボタン追加
+    override func setEditing(editing: Bool, animated: Bool)
+    {
+        super.setEditing(editing, animated: animated)
+        
+        myTableView.setEditing(editing, animated: animated)
+    }
+    
+    func (myTableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [AnyObject]?
+    {
+        // 編集
+        let edit = UITableViewRowAction(style: .Normal, title: "Edit")
+        {
+            (action, indexPath) in
+            
+            self.itemArray[indexPath.row] += "!!"
+            self.swipeTable.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        }
+        
+        edit.backgroundColor = UIColor.greenColor()
+        
+        // 削除
+        let del = UITableViewRowAction(style: .Default, title: "Delete")
+        {
+            (action, indexPath) in
+            
+            self.itemArray.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        }
+        
+        del.backgroundColor = UIColor.redColor()
+        
+        return [edit, del]
+    }
+    
+    
+    func myTableView(myTableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool
+    {
+        return true
+    }
+    
+    func myTableView(myTableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
+        let tmp = itemArray[sourceIndexPath.row]
+        itemArray.removeAtIndex(sourceIndexPath.row)
+        itemArray.insert(tmp, atIndex: destinationIndexPath.row)
+    }
+    
+    // 編集操作に対応
+    // ※スワイプで処理する場合、ここでは何もしないが関数は必要
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+    }
     
        override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        //キーボードにボタン追加[Done]
+        // ボタンビュー作成
+        var myKeyboard = UIView(frame: CGRectMake(0, 0, 320, 40))
+        myKeyboard.backgroundColor = UIColor.darkGrayColor()
+        
+        // Doneボタン作成
+        var myButton = UIButton(frame: CGRectMake(5, 5, 80, 30))
+        myButton.backgroundColor = UIColor.lightGrayColor()
+        myButton.setTitle("Done", forState: UIControlState.Normal)
+        myButton.addTarget(self, action: "onMyButton", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        // ボタンをビューに追加
+        myKeyboard.addSubview(myButton)
+        
+        // ビューをフィールドに設定
+        diaryTitle.inputAccessoryView = myKeyboard
+        diaryTitle.delegate = self
+    
         
         
         //ユーザーデフォルトから保存した配列を取り出す
@@ -42,9 +112,9 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
         if (myDefault.objectForKey("diaryList") != nil)
         {
             //データ取り出し
-            diaryList = myDefault.objectForKey("diaryList") as! [Dictionary]
+            titleList = myDefault.objectForKey("diaryList") as! [Dictionary]
         }
-        print(diaryList)
+        print(titleList)
         
         //内容
         if (myDefault.objectForKey("contentsHash") != nil)
@@ -71,8 +141,8 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
         celectedDateLabel.text = "\(datestr)"
         
         
-        //配列の個数だけ繰り返し表示(配列から辞書データを取り出す)
-        for dat in diaryList
+        //配列の個数だけ繰り返し表示(配列から辞書データを取り出す):タイトル
+        for dat in titleList
         {
             //stringは文字
             var savedDate = dat["date"] as! String!
@@ -84,7 +154,7 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
             if (savedDate == datestr){diaryTitle.text = savedTitle}
         }
     
-        //配列の個数だけ繰り返し表示(配列から辞書データを取り出す)
+        //配列の個数だけ繰り返し表示(配列から辞書データを取り出す)：内容
         for dat in contentsHash
         {
             //stringは文字
@@ -113,6 +183,9 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
         var datestr = df.stringFromDate(selectedDate)
         
         celectedDateLabel.text = "\(datestr)"
+        
+        
+        //次画面の内容表示
     }
    
     //次画面
@@ -129,6 +202,8 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
         var datestr = df.stringFromDate(selectedDate)
         
         celectedDateLabel.text = "\(datestr)"
+        
+         //次画面の内容表示
     
     }
     
@@ -139,11 +214,11 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
         print("スワイプしました")
     }
  
-    
+    //cellの数
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         
-        return 2}
-    
+        return contentsHash.count}
+    //cellの中身
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) ->
         UITableViewCell {var cell = tableView.dequeueReusableCellWithIdentifier("hashcell") as! hashTableViewCell
             //cell.textLabel?.text = "文字列"
@@ -155,11 +230,12 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
     @IBAction func saveBtn(sender: UIButton)
     {
         var i = 0
-        for dat in diaryList
+        for dat in titleList
         {
             //stringは文字
             var savedDate = dat["date"] as! String!
             var savedTitle = dat["title"] as! String!
+            
            
             //日を表示、代入祭り
             var df = NSDateFormatter()
@@ -167,23 +243,32 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
             var datestr = df.stringFromDate(selectedDate)
             
             //titleの表示、データの数字と選んだ数字
-            if (savedDate == datestr){diaryList.removeAtIndex(i)}
+            if (savedDate == datestr){titleList.removeAtIndex(i)}
             
             i++
             
             print("date[\(savedDate)] title[\(savedTitle)]")
-        }
+        
+            
+        
+    
+        
+        
+    }
 
         
         
         //タイトルの追加
-        diaryList.append(["title":diaryTitle.text!,"date":celectedDateLabel.text!])
+        titleList.append(["title":diaryTitle.text!,"date":celectedDateLabel.text!])
+        
         
         //ユーザーデフォルトに保存する作業
         //ユーザーデフォルトを用意
         var myDefault = NSUserDefaults.standardUserDefaults()
         //データを書き込んで
-        myDefault.setObject(diaryList, forKey:"diaryList")
+        myDefault.setObject(titleList, forKey:"titleList")
+        myDefault.setObject(
+            contentsHash, forKey:"contentsHash")
         //即反映される
         myDefault.synchronize()
         
@@ -199,5 +284,10 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
         // Dispose of any resources that can be recreated.
     }
     
+    func onMyButton ()
+    {
+        self.view.endEditing(true )
+    }
+
 
 }

@@ -153,8 +153,12 @@
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="cTO-Pz-yPc">
                                                     <rect key="frame" x="79" y="10" width="213" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <gestureRecognizers/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="kod-l8-V3I" appends="YES" id="PYF-Y7-Xic"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -205,6 +209,7 @@
                         <action selector="swipe:" destination="dRz-hn-eED" id="08k-qx-OJD"/>
                     </connections>
                 </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="kod-l8-V3I"/>
             </objects>
             <point key="canvasLocation" x="957" y="127"/>
         </scene>
