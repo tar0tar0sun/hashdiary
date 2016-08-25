@@ -26,12 +26,23 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
    //日記の内容の名前付け
     var contentsHash = [["contents":"日記内容","date":"2016-05-13"]]
     
-    // 編集操作に対応、削除の機能
+    // 削除の機能
     // ※スワイプで処理する場合、ここでは何もしないが関数は必要
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath)
     {
+        if editingStyle == UITableViewCellEditingStyle.Delete
+        {
+            arr.removeObjectAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+        }
+    }
+   
+    {
     //消す作業
-    
+        func myCellView(myCellView: UITableView,canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool
+        {
+            return true
+        }
     }
     
        override func viewDidLoad()
@@ -62,8 +73,8 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
         var myDefault = NSUserDefaults.standardUserDefaults()
         //ユーザーデフォルトを全削除する→一端削除するとコメントアウトする
 //       var appDomain:String = NSBundle.mainBundle().bundleIdentifier!
-//        myDefault.removePersistentDomainForName(appDomain)
-//
+//      myDefault.removePersistentDomainForName(appDomain)
+
         //タイトル
         if (myDefault.objectForKey("diaryList") != nil)
         {
@@ -179,7 +190,6 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
             cell.contentText.text = contentsHash[indexPath.row]["contents"]
            
             return cell
-            
     }
     
     
@@ -192,6 +202,7 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
             //stringは文字
             var savedDate = dat["date"] as! String!
             var savedTitle = dat["title"] as! String!
+            
             
            
             //日を表示、代入祭り
