@@ -77,13 +77,14 @@ class hashTableViewCell: UITableViewCell,UITextFieldDelegate
        //追加ボタン機能
     }
     
-    //ダンボタン
+    //Doneボタン
     func onMyButton2 ()
     {
         // self.view.endEditing(true )
         contentText.resignFirstResponder()
     }
-
+    
+    //内容の一時保存(保存)
     func textFieldDidEndEditing(textField: UITextField)
     {
         if let cell = contentText.superview?.superview as? hashTableViewCell

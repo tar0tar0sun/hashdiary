@@ -24,15 +24,18 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
     //日記のタイトル
     var titleList = [["title":"タイトル1","date":"2016-05-13"],["title":"タイトル2","date":"2016-05-14"],["title":"タイトル3","date":"2016-05-15"]]
    //日記の内容の名前付け
-    var contentsHash = [["contents":"タイトル1","date":"2016-05-13"],["contents":"タイトル2","date":"2016-05-14"],["contents":"タイトル3","date":"2016-05-15"]]
+    var contentsHash = [["contents":"日記内容","date":"2016-05-13"]]
     
-    // 編集操作に対応
+    // 編集操作に対応、削除の機能
     // ※スワイプで処理する場合、ここでは何もしないが関数は必要
-    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath)
+    {
+    //消す作業
+    
     }
     
        override func viewDidLoad()
-    {
+ {
         super.viewDidLoad()
         
         //キーボードにボタン追加[Done]
@@ -58,9 +61,9 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
         //ユーザーデフォルトから保存した配列を取り出す
         var myDefault = NSUserDefaults.standardUserDefaults()
         //ユーザーデフォルトを全削除する→一端削除するとコメントアウトする
-       // var appDomain:String = NSBundle.mainBundle().bundleIdentifier!
-        //myDefault.removePersistentDomainForName(appDomain)
-
+//       var appDomain:String = NSBundle.mainBundle().bundleIdentifier!
+//        myDefault.removePersistentDomainForName(appDomain)
+//
         //タイトル
         if (myDefault.objectForKey("diaryList") != nil)
         {
@@ -115,12 +118,9 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
             var savedTitle = dat["contents"] as! String!
             
             print("date[\(savedDate)] title[\(savedTitle)]")
-            
         }
-
-      
-        
-    }
+ }
+    
     
     //次画面
     @IBAction func changeNextDate(sender: UIButton)
@@ -175,7 +175,11 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) ->
         UITableViewCell {var cell = tableView.dequeueReusableCellWithIdentifier("hashcell") as! hashTableViewCell
             //cell.textLabel?.text = "文字列"
+            //書いた内容が表示される代入文
+            cell.contentText.text = contentsHash[indexPath.row]["contents"]
+           
             return cell
+            
     }
     
     
@@ -201,13 +205,7 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
             i++
             
             print("date[\(savedDate)] title[\(savedTitle)]")
-        
-            
-        
-    
-        
-        
-    }
+        }
 
         
         

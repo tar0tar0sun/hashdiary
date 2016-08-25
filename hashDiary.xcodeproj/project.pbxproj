@@ -110,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				493D010C1D62DB1D007676CB /* dayViewController.swift */,
+				498FD5A61D659C9F0012CE4B /* hashTableViewCell.swift */,
 				49567E921D61A5C900C1F6CC /* Main.storyboard */,
 				4969C4F51D5DA94D00782FE6 /* Assets.xcassets */,
 				4969C4F71D5DA94D00782FE6 /* LaunchScreen.storyboard */,
@@ -117,7 +118,6 @@
 				4969C4F01D5DA94D00782FE6 /* ViewController.swift */,
 				4969C4EE1D5DA94D00782FE6 /* AppDelegate.swift */,
 				4914FFE81D61A1280054970E /* CalculateCalendarLogic.swift */,
-				498FD5A61D659C9F0012CE4B /* hashTableViewCell.swift */,
 				4969C51C1D5DB15600782FE6 /* DeviseSize.swift */,
 			);
 			path = hashDiary;
