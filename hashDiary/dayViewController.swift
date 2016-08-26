@@ -33,11 +33,12 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
 
         //消す作業
         //ifで1つ以上だったら消せるっていう機能
-        
+        if(contentsHash.count > 1){
         if editingStyle == UITableViewCellEditingStyle.Delete {
                 contentsHash.removeAtIndex(indexPath.row)
                 
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+        }
         }
     }
         
@@ -88,7 +89,8 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
         }
         print(contentsHash)
 
-        
+        //１個しかない場合、deleteボタンを出さないようにする
+    
         
         
         // NavigationBarを隠す処理
