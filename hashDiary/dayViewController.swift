@@ -30,19 +30,14 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
     // ※スワイプで処理する場合、ここでは何もしないが関数は必要
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath)
     {
-        if editingStyle == UITableViewCellEditingStyle.Delete
-        {
-            arr.removeObjectAtIndex(indexPath.row)
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
-        }
-    }
-   
-    {
-    //消す作業
-        func myCellView(myCellView: UITableView,canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool
-        {
-            return true
-        }
+
+        //消す作業
+        func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+            if editingStyle == UITableViewCellEditingStyle.Delete {
+                contentsHash.removeAtIndex(indexPath.row)
+                
+                
+                tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)}}
     }
     
        override func viewDidLoad()
@@ -110,55 +105,30 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
         
         //配列の個数だけ繰り返し表示(配列から辞書データを取り出す):タイトル
         for dat in titleList
-        {
-            //stringは文字
-            var savedDate = dat["date"] as! String!
-            var savedTitle = dat["title"] as! String!
-            
-            print("date[\(savedDate)] title[\(savedTitle)]")
-            
-            //titleの表示、データの数字と選んだ数字
-            if (savedDate == datestr){diaryTitle.text = savedTitle}
-        }
-    
-        //配列の個数だけ繰り返し表示(配列から辞書データを取り出す)：内容
-        for dat in contentsHash
-        {
-            //stringは文字
-            var savedDate = dat["date"] as! String!
-            var savedTitle = dat["contents"] as! String!
-            
-            print("date[\(savedDate)] title[\(savedTitle)]")
-        }
+        {}
  }
-    
+
     
     //次画面
     @IBAction func changeNextDate(sender: UIButton)
     {
-        let cal = NSCalendar(identifier: NSCalendarIdentifierGregorian)!
-        
-        selectedDate = cal.dateByAddingUnit(.Day, value: +1, toDate: selectedDate, options: NSCalendarOptions())!
-        
-        var df = NSDateFormatter()
-        
-        df.dateFormat = "yyyy/MM/dd"
-        
-        var datestr = df.stringFromDate(selectedDate)
-        
-        celectedDateLabel.text = "\(datestr)"
-        
-        
-        //次画面の内容表示
+        changeDateDisplay(-1)
     }
+    
    
     //次画面
     @IBAction func changePreviousDate(sender: UIButton)
     {
+         changeDateDisplay(+1)
+    }
+    
+    //関数でまとめた
+    func changeDateDisplay(var dayChangeNumber:Int)
+    {
         let cal = NSCalendar(identifier: NSCalendarIdentifierGregorian)!
         
-        selectedDate = cal.dateByAddingUnit(.Day, value: -1, toDate: selectedDate, options: NSCalendarOptions())!
-   
+        selectedDate = cal.dateByAddingUnit(.Day, value: dayChangeNumber, toDate: selectedDate, options: NSCalendarOptions())!
+        
         var df = NSDateFormatter()
         
         df.dateFormat = "yyyy/MM/dd"
@@ -167,9 +137,9 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
         
         celectedDateLabel.text = "\(datestr)"
         
-         //次画面の内容表示
-    
     }
+    
+    
     
     //スワイプ効果
     @IBAction func swipe(sender: UISwipeGestureRecognizer)
@@ -246,6 +216,7 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
         // Dispose of any resources that can be recreated.
     }
     
+    //タイトルのDONEボタンが押された時
     func onMyButton ()
     {
         self.view.endEditing(true )

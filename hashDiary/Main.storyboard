@@ -163,7 +163,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="contentHash" destination="LgU-N2-uxp" id="3h3-8m-Mgy"/>
+                                            <outlet property="HashLabel" destination="LgU-N2-uxp" id="Mh6-IC-OqR"/>
                                             <outlet property="contentText" destination="cTO-Pz-yPc" id="7TI-Mv-BL2"/>
                                         </connections>
                                     </tableViewCell>

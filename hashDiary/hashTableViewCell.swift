@@ -11,7 +11,7 @@ import UIKit
 class hashTableViewCell: UITableViewCell,UITextFieldDelegate
 {
     
-    @IBOutlet weak var contentHash: UILabel!
+    @IBOutlet weak var HashLabel: UILabel!
     @IBOutlet weak var contentText: UITextField!
     
     
@@ -26,7 +26,7 @@ class hashTableViewCell: UITableViewCell,UITextFieldDelegate
         var myKeyboard = UIView(frame: CGRectMake(0, 0, 320, 40))
         myKeyboard.backgroundColor = UIColor.darkGrayColor()
         
-        // Doneボタン作成
+        // #ボタン作成
         var myButton = UIButton(frame: CGRectMake(5, 5, 80, 30))
         myButton.backgroundColor = UIColor.lightGrayColor()
         myButton.setTitle("#", forState: UIControlState.Normal)
@@ -56,8 +56,6 @@ class hashTableViewCell: UITableViewCell,UITextFieldDelegate
         // ビューをフィールドに設定
         contentText.inputAccessoryView = myKeyboard
         contentText.delegate = self
-        
-        
     }
     
     
@@ -74,7 +72,24 @@ class hashTableViewCell: UITableViewCell,UITextFieldDelegate
     {
        // self.view.endEditing(true )
        //contentText.resignFirstResponder()
-       //追加ボタン機能
+       //【追加ボタン機能】
+       //1.配列に1データを追加する
+        let cell = contentText.superview?.superview as? hashTableViewCell
+        var tableView = cell!.superview?.superview as! UITableView
+        var dayVC = tableView.superclass as! dayViewController
+        
+        var df = NSDateFormatter()
+        df.dateFormat = "yyyy/MM/dd"
+        var datestr = df.stringFromDate(dayVC.selectedDate)
+        
+        //新規追加Dictionary 作成
+        var newHash:Dictionary = ["date":datestr,"contents":""]
+         dayVC.contentsHash.append(newHash)
+        
+
+       //2.テーブルビューリロードデータ
+        tableView.reloadData()
+        
     }
     
     //Doneボタン
@@ -84,7 +99,7 @@ class hashTableViewCell: UITableViewCell,UITextFieldDelegate
         contentText.resignFirstResponder()
     }
     
-    //内容の一時保存(保存)
+    //内容の一時保存(編集中の一時的な保存)
     func textFieldDidEndEditing(textField: UITextField)
     {
         if let cell = contentText.superview?.superview as? hashTableViewCell
