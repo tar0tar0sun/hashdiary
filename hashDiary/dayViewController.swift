@@ -32,13 +32,15 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
     {
 
         //消す作業
-        func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-            if editingStyle == UITableViewCellEditingStyle.Delete {
+        //ifで1つ以上だったら消せるっていう機能
+        
+        if editingStyle == UITableViewCellEditingStyle.Delete {
                 contentsHash.removeAtIndex(indexPath.row)
                 
-                
-                tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)}}
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+        }
     }
+        
     
        override func viewDidLoad()
  {
@@ -122,7 +124,7 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
          changeDateDisplay(+1)
     }
     
-    //関数でまとめた
+    //関数でまとめてシンプルに
     func changeDateDisplay(var dayChangeNumber:Int)
     {
         let cal = NSCalendar(identifier: NSCalendarIdentifierGregorian)!

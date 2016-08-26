@@ -76,7 +76,7 @@ class hashTableViewCell: UITableViewCell,UITextFieldDelegate
        //1.配列に1データを追加する
         let cell = contentText.superview?.superview as? hashTableViewCell
         var tableView = cell!.superview?.superview as! UITableView
-        var dayVC = tableView.superclass as! dayViewController
+        var dayVC = tableView.delegate as! dayViewController
         
         var df = NSDateFormatter()
         df.dateFormat = "yyyy/MM/dd"
