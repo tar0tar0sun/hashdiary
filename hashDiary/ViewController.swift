@@ -31,6 +31,7 @@ class ViewController: UIViewController {
     
     //メンバ変数の設定（カレンダーの背景色）
     var calendarBackGroundColor: UIColor!
+    var backGroundcolor: UIColor!
     
     //プロパティを指定
     @IBOutlet var calendarBar: UILabel!
@@ -54,11 +55,11 @@ class ViewController: UIViewController {
     var calendarSize: Int!
     var calendarFontSize: Int!
     
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
-        
+    
         //現在起動中のデバイスを取得（スクリーンの幅・高さ）
         let screenWidth  = DeviseSize.screenWidth()
         let screenHeight = DeviseSize.screenHeight()
@@ -205,6 +206,9 @@ class ViewController: UIViewController {
                 CGFloat(calendarLabelWidth),
                 CGFloat(calendarLabelHeight)
             )
+            //アプリ画面背景色：青
+            //backGroundcolor = UIColor.blueColor()
+            //self.view.backgroundColor = backGroundcolor
             
             //日曜日の場合は赤色を指定
             if (i == 0) {
@@ -299,7 +303,7 @@ class ViewController: UIViewController {
             //@remark:このサンプルでは正円のボタンを作っていますが、背景画像の設定等も可能です。
             if (i % 7 == 0 || holidayFlag == true) {
                 calendarBackGroundColor = UIColor(
-                    red: CGFloat(0.831), green: CGFloat(0.349), blue: CGFloat(0.224), alpha: CGFloat(1.0)
+                    red: CGFloat(1.000), green: CGFloat(1.000), blue: CGFloat(1.000), alpha: CGFloat(1.0)
                 )
             } else if (i % 7 == 6) {
                 calendarBackGroundColor = UIColor(
@@ -327,7 +331,7 @@ class ViewController: UIViewController {
     
     //タイトル表記を設定する関数
     func setupCalendarTitleLabel() {
-        calendarBar.text = String("\(year)年\(month)月のカレンダー")
+        calendarBar.text = String("\(year)年\(month)月")
     }
     
     //現在（初期表示時）の年月に該当するデータを取得する関数
