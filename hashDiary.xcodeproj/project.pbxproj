@@ -19,6 +19,7 @@
 		4969C51D1D5DB15600782FE6 /* DeviseSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4969C51C1D5DB15600782FE6 /* DeviseSize.swift */; };
 		498FD5A51D65813F0012CE4B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 498FD5A41D65813F0012CE4B /* QuartzCore.framework */; };
 		498FD5A71D659C9F0012CE4B /* hashTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498FD5A61D659C9F0012CE4B /* hashTableViewCell.swift */; };
+		49B583781D76B3E700F7531C /* searchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B583771D76B3E700F7531C /* searchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		4969C51C1D5DB15600782FE6 /* DeviseSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviseSize.swift; sourceTree = "<group>"; };
 		498FD5A41D65813F0012CE4B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		498FD5A61D659C9F0012CE4B /* hashTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hashTableViewCell.swift; sourceTree = "<group>"; };
+		49B583771D76B3E700F7531C /* searchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			children = (
 				493D010C1D62DB1D007676CB /* dayViewController.swift */,
 				498FD5A61D659C9F0012CE4B /* hashTableViewCell.swift */,
+				49B583771D76B3E700F7531C /* searchViewController.swift */,
 				49567E921D61A5C900C1F6CC /* Main.storyboard */,
 				4969C4F51D5DA94D00782FE6 /* Assets.xcassets */,
 				4969C4F71D5DA94D00782FE6 /* LaunchScreen.storyboard */,
@@ -275,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49B583781D76B3E700F7531C /* searchViewController.swift in Sources */,
 				4969C4F11D5DA94D00782FE6 /* ViewController.swift in Sources */,
 				498FD5A71D659C9F0012CE4B /* hashTableViewCell.swift in Sources */,
 				4914FFE91D61A1280054970E /* CalculateCalendarLogic.swift in Sources */,

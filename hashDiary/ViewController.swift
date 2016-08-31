@@ -303,19 +303,21 @@ class ViewController: UIViewController {
             //@remark:このサンプルでは正円のボタンを作っていますが、背景画像の設定等も可能です。
             if (i % 7 == 0 || holidayFlag == true) {
                 calendarBackGroundColor = UIColor(
-                    red: CGFloat(1.000), green: CGFloat(1.000), blue: CGFloat(1.000), alpha: CGFloat(1.0)
+                    //1にしたら全部「白」
+                    red: CGFloat(1.000), green: CGFloat(1.000), blue: CGFloat(1.000), alpha: CGFloat(0.7)
                 )
             } else if (i % 7 == 6) {
                 calendarBackGroundColor = UIColor(
-                    red: CGFloat(0.400), green: CGFloat(0.471), blue: CGFloat(0.980), alpha: CGFloat(1.0)
+                    red: CGFloat(1.000), green: CGFloat(1.000), blue: CGFloat(1.000), alpha: CGFloat(0.7)
                 )
             } else {
-                calendarBackGroundColor = UIColor.lightGrayColor()
+                //平日の色
+                calendarBackGroundColor = UIColor.whiteColor()
             }
             
             //ボタンのデザインを決定する
             button.backgroundColor = calendarBackGroundColor
-            button.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+            button.setTitleColor(UIColor.blackColor(), forState: .Normal)
             button.titleLabel!.font = UIFont(name: "System", size: CGFloat(calendarFontSize))
             button.layer.cornerRadius = CGFloat(buttonRadius)
             
@@ -331,7 +333,7 @@ class ViewController: UIViewController {
     
     //タイトル表記を設定する関数
     func setupCalendarTitleLabel() {
-        calendarBar.text = String("\(year)年\(month)月")
+        calendarBar.text = String("\(year).\(month)")
     }
     
     //現在（初期表示時）の年月に該当するデータを取得する関数
