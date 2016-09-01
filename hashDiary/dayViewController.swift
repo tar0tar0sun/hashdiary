@@ -194,6 +194,7 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
 
         
         
+        
         //タイトルの追加
         titleList.append(["title":diaryTitle.text!,"date":celectedDateLabel.text!])
         
@@ -210,7 +211,7 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
         
         print("保存されました")
 
-
+        
     }
 
     

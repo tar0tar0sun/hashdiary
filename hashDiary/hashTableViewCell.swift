@@ -125,6 +125,7 @@ class hashTableViewCell: UITableViewCell,UITextFieldDelegate
     
     
     //内容の一時保存(編集中の一時的な保存)
+    //tmpコンテンツハッシュに追加して→保存の所に移動
     func textFieldDidEndEditing(textField: UITextField)
     {
         if let cell = contentText.superview?.superview as? hashTableViewCell
@@ -134,7 +135,6 @@ class hashTableViewCell: UITableViewCell,UITextFieldDelegate
             let indexPath = tableView.indexPathForCell(cell)
             
             print(indexPath?.row)
-            
             print(textField.text)
         }
     }
