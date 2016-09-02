@@ -22,9 +22,12 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
     var selectedDate = NSDate()
     
     //日記のタイトル
-    var titleList = [["title":"タイトル1","date":"2016-05-13"],["title":"タイトル2","date":"2016-05-14"],["title":"タイトル3","date":"2016-05-15"]]
+    var titleList = [["title":"タイトル1","date":"2016/05/13"],["title":"タイトル2","date":"2016/05/14"],["title":"タイトル3","date":"2016/05/15"]]
    //日記の内容の名前付け
-    var contentsHash = [["contents":"日記内容","date":"2016-05-13"]]
+    var contentsHash = [["contents":"日記内容","date":"2016/05/13"]]
+    //コンテンツテンプ名前付け
+    var contentsHashTmp = [["contents":"日記内容","date":"2016/05/13"]]
+    
     
     // 削除の機能
     // ※スワイプで処理する場合、ここでは何もしないが関数は必要
@@ -36,6 +39,8 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
         if(contentsHash.count > 1){
         if editingStyle == UITableViewCellEditingStyle.Delete {
                 contentsHash.removeAtIndex(indexPath.row)
+                contentsHashTmp.removeAtIndex(indexPath.row)
+            
                 
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
         }
@@ -70,8 +75,8 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
         //ユーザーデフォルトから保存した配列を取り出す
         var myDefault = NSUserDefaults.standardUserDefaults()
         //ユーザーデフォルトを全削除する→一端削除するとコメントアウトする
-//       var appDomain:String = NSBundle.mainBundle().bundleIdentifier!
-//      myDefault.removePersistentDomainForName(appDomain)
+    //    var appDomain:String = NSBundle.mainBundle().bundleIdentifier!
+    //   myDefault.removePersistentDomainForName(appDomain)
 
         //タイトル
         if (myDefault.objectForKey("diaryList") != nil)
@@ -88,7 +93,16 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
             contentsHash = myDefault.objectForKey("contentsHash") as! [Dictionary]
         }
         print(contentsHash)
+    
+        //コンテンツハッシュtmpも取り出し
+    if (myDefault.objectForKey("contentsHashTmp") != nil)
+    {
+        //データ取り出し
+        contentsHashTmp = myDefault.objectForKey("contentsHashTmp") as![Dictionary<String,String>]
+    }
+    
 
+    
         //１個しかない場合、deleteボタンを出さないようにする
     
         
@@ -141,6 +155,8 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
         
         celectedDateLabel.text = "\(datestr)"
         
+        //日付と同時に内容も変わる機能
+        
     }
     
     
@@ -170,6 +186,7 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
     //保存ボタン
     @IBAction func saveBtn(sender: UIButton)
     {
+        // -----  title の設定 ------------------------------------------------
         var i = 0
         for dat in titleList
         {
@@ -193,15 +210,57 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
         }
 
         
-        
-        
         //タイトルの追加
         titleList.append(["title":diaryTitle.text!,"date":celectedDateLabel.text!])
         
         
-        //ユーザーデフォルトに保存する作業
-        //ユーザーデフォルトを用意
+        // -----  title の設定 End ------------------------------------------------
+        
+        // -----  contentsHash の設定 ------------------------------------------------
+        
+        // 新しい情報の保存前に古い情報を削除するための繰り返し文
+        i = 0
+        
+        var muContentsHash:NSMutableArray = (contentsHash as! NSMutableArray).mutableCopy() as! NSMutableArray
+        for dat in contentsHash
+        {
+            //stringは文字
+            var savedDate = dat["date"] as! String!
+            
+            
+            //日を表示、代入祭り
+            var df = NSDateFormatter()
+            df.dateFormat = "yyyy/MM/dd"
+            var datestr = df.stringFromDate(selectedDate)
+            
+            //データの日付と選んだ日付が同じ場合、削除
+            if (savedDate == datestr){muContentsHash.removeObject(dat)}
+            
+            
+    
+        }
+        contentsHash = muContentsHash as! Array
+        
+        
+        
+        //新しいデータを追加
         var myDefault = NSUserDefaults.standardUserDefaults()
+         var contentsHashTmp:[Dictionary<String,String>] = []
+        if (myDefault.objectForKey("contentsHashTmp") != nil)
+        {
+            //データ取り出し
+            contentsHashTmp = myDefault.objectForKey("contentsHashTmp") as![Dictionary<String,String>]
+        }
+        
+        for var hashEach in contentsHashTmp {
+            contentsHash.append(["contents":hashEach["contents"]!,"date":celectedDateLabel.text!])
+            
+        }
+
+         // -----  contentsHash の設定 End ------------------------------------------------
+
+        
+        //ユーザーデフォルトに保存する作業
         //データを書き込んで
         myDefault.setObject(titleList, forKey:"titleList")
         myDefault.setObject(
@@ -210,8 +269,6 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
         myDefault.synchronize()
         
         print("保存されました")
-
-        
     }
 
     

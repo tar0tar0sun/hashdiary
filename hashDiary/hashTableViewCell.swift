@@ -99,6 +99,19 @@ class hashTableViewCell: UITableViewCell,UITextFieldDelegate
         var newHash:Dictionary = ["date":datestr,"contents":""]
          dayVC.contentsHash.append(newHash)
         
+        var myDefault = NSUserDefaults.standardUserDefaults()
+        var contentsHashTmp:[Dictionary<String,String>] = []
+        //内容
+        if (myDefault.objectForKey("contentsHashTmp") != nil)
+        {
+            //データ取り出し
+            contentsHashTmp = myDefault.objectForKey("contentsHashTmp") as![Dictionary<String,String>]
+        }
+        contentsHashTmp.append(newHash)
+        myDefault.setObject(contentsHashTmp, forKey: "contentsHashTmp")
+        myDefault.synchronize()
+        
+
 
        //2.テーブルビューリロードデータ
         tableView.reloadData()
@@ -134,8 +147,33 @@ class hashTableViewCell: UITableViewCell,UITextFieldDelegate
             var tableView = cell.superview?.superview as! UITableView
             let indexPath = tableView.indexPathForCell(cell)
             
+            var dayVC = tableView.delegate as! dayViewController
+            
+            var df = NSDateFormatter()
+            df.dateFormat = "yyyy/MM/dd"
+            var datestr = df.stringFromDate(dayVC.selectedDate)
+            
             print(indexPath?.row)
             print(textField.text)
+            
+            var myDefault = NSUserDefaults.standardUserDefaults()
+            var contentsHashTmp:[Dictionary<String,String>]
+            //内容
+            if (myDefault.objectForKey("contentsHashTmp") != nil)
+            {
+                //データ取り出し
+                contentsHashTmp = myDefault.objectForKey("contentsHashTmp") as![Dictionary<String,String>]
+            }else{
+            contentsHashTmp = dayVC.contentsHash}
+        
+            contentsHashTmp[(indexPath?.row)!] = ["date":datestr,"contents":textField.text!]
+            
+            print("\(contentsHashTmp)")
+            
+            //再セット
+            myDefault.setObject(contentsHashTmp, forKey: "contentsHashTmp")
+            myDefault.synchronize()
+            
         }
     }
 
