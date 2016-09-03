@@ -153,9 +153,50 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
         
         var datestr = df.stringFromDate(selectedDate)
         
+        
+        
+        //内容を表示
+        //まっさらにして(tmpだけ)見つけたら今のやつを表示
+        //内容
+        if (myDefault.objectForKey("contentsHash") != nil)
+        {
+            //データ取り出し
+            contentsHash = myDefault.objectForKey("contentsHash") as! [Dictionary]
+        }
+        print(contentsHash)
+        
+        //コンテンツハッシュtmpも取り出し
+        if (myDefault.objectForKey("contentsHashTmp") != nil)
+        {
+            //データ取り出し
+            contentsHashTmp = myDefault.objectForKey("contentsHashTmp") as![Dictionary<String,String>]
+        }
+        
+        
+        if (myDefault.objectForKey("contentsHashTmp") != nil)
+        {
+
+            
+        //ユーザーデフォルト(tmp)を削除する
+            //キー指定
+            var myDefault = NSUserDefaults.standardUserDefaults()
+            var contentsHashTmp:Array = myDefault.stringForKey("myArry")!
+           
+            myDefault.removeObjectForKey("myArry")
+         
+            //データ取り出し
+            contentsHashTmp = myDefault.objectForKey("contentsHashTmp") as![Dictionary<String,String>]
+            
+            //データの日付と選んだ日付が同じ場合、
+        if (contentsHashTmp = selectedDate){muContentsHash}
+
+            print("\(contentsHashTmp)")
+        }
+        
+       
+        //日付を表示
         celectedDateLabel.text = "\(datestr)"
         
-        //日付と同時に内容も変わる機能
         
     }
     
