@@ -41,9 +41,8 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
                 contentsHash.removeAtIndex(indexPath.row)
                 contentsHashTmp.removeAtIndex(indexPath.row)
             
-                
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
-        }
+                tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+         }
         }
     }
         
@@ -102,10 +101,6 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
     }
     
 
-    
-        //１個しかない場合、deleteボタンを出さないようにする
-    
-        
         
         // NavigationBarを隠す処理
         self.navigationController?.setNavigationBarHidden(true, animated: true)
@@ -130,14 +125,14 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
     //次画面
     @IBAction func changeNextDate(sender: UIButton)
     {
-        changeDateDisplay(-1)
+        changeDateDisplay(+1)
     }
     
    
     //次画面
     @IBAction func changePreviousDate(sender: UIButton)
     {
-         changeDateDisplay(+1)
+         changeDateDisplay(-1)
     }
     
     //関数でまとめてシンプルに
@@ -157,47 +152,49 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
         
         //内容を表示
         //まっさらにして(tmpだけ)見つけたら今のやつを表示
-        //内容
-        if (myDefault.objectForKey("contentsHash") != nil)
-        {
-            //データ取り出し
-            contentsHash = myDefault.objectForKey("contentsHash") as! [Dictionary]
-        }
-        print(contentsHash)
+        contentsHashTmp.removeAll()
         
-        //コンテンツハッシュtmpも取り出し
-        if (myDefault.objectForKey("contentsHashTmp") != nil)
-        {
-            //データ取り出し
-            contentsHashTmp = myDefault.objectForKey("contentsHashTmp") as![Dictionary<String,String>]
-        }
-        
+        var myDefault = NSUserDefaults.standardUserDefaults()
         
         if (myDefault.objectForKey("contentsHashTmp") != nil)
         {
-
-            
-        //ユーザーデフォルト(tmp)を削除する
+            //ユーザーデフォルト(tmp)を削除する
             //キー指定
-            var myDefault = NSUserDefaults.standardUserDefaults()
-            var contentsHashTmp:Array = myDefault.stringForKey("myArry")!
-           
-            myDefault.removeObjectForKey("myArry")
-         
-            //データ取り出し
-            contentsHashTmp = myDefault.objectForKey("contentsHashTmp") as![Dictionary<String,String>]
-            
-            //データの日付と選んだ日付が同じ場合、
-        if (contentsHashTmp = selectedDate){muContentsHash}
-
-            print("\(contentsHashTmp)")
+            myDefault.removeObjectForKey("contentsHashTmp")
         }
         
-       
+            //contentHashの中身をルーブで取り出し、表示日付と同じハッシュタグをcontentsHashTmp(メンバ変数)に追加
+             //for 文
+            for contentsHashEach in contentsHash {
+                //データの日付と選んだ日付が同じ場合、
+                if (contentsHashEach["date"] == datestr){
+                
+                    print("\(contentsHashEach)")
+                    
+                    //contentsHashTmp(メンバ変数)に追加
+                    contentsHashTmp.append(contentsHashEach)
+
+                    }
+
+            }
+            //UserDefaultのcontentsHashTmpにメンバ変数contentsHashTmpを保存
+            //データを書き込んで
+            myDefault.setObject(
+                contentsHashTmp, forKey:"contentsHashTmp")
+            //即反映される
+            myDefault.synchronize()
+
+        
+        
+        //  hashタグが表示されている TableViewの再読込
+        myCellView.reloadData()
+        
+
+    
         //日付を表示
         celectedDateLabel.text = "\(datestr)"
         
-        
+    
     }
     
     
@@ -212,13 +209,13 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
     //cellの数
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         
-        return contentsHash.count}
+        return contentsHashTmp.count}
     //cellの中身
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) ->
         UITableViewCell {var cell = tableView.dequeueReusableCellWithIdentifier("hashcell") as! hashTableViewCell
             //cell.textLabel?.text = "文字列"
             //書いた内容が表示される代入文
-            cell.contentText.text = contentsHash[indexPath.row]["contents"]
+            cell.contentText.text = contentsHashTmp[indexPath.row]["contents"]
            
             return cell
     }
