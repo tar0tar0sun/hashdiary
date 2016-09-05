@@ -71,54 +71,59 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
     
         
         
-        //ユーザーデフォルトから保存した配列を取り出す
-        var myDefault = NSUserDefaults.standardUserDefaults()
-        //ユーザーデフォルトを全削除する→一端削除するとコメントアウトする
-    //    var appDomain:String = NSBundle.mainBundle().bundleIdentifier!
-    //   myDefault.removePersistentDomainForName(appDomain)
-
-        //タイトル
-        if (myDefault.objectForKey("diaryList") != nil)
-        {
-            //データ取り出し
-            titleList = myDefault.objectForKey("diaryList") as! [Dictionary]
-        }
-        print(titleList)
-        
-        //内容
-        if (myDefault.objectForKey("contentsHash") != nil)
-        {
-            //データ取り出し
-            contentsHash = myDefault.objectForKey("contentsHash") as! [Dictionary]
-        }
-        print(contentsHash)
-    
-        //コンテンツハッシュtmpも取り出し
-    if (myDefault.objectForKey("contentsHashTmp") != nil)
-    {
-        //データ取り出し
-        contentsHashTmp = myDefault.objectForKey("contentsHashTmp") as![Dictionary<String,String>]
-    }
-    
+//        //ユーザーデフォルトから保存した配列を取り出す
+//        var myDefault = NSUserDefaults.standardUserDefaults()
+//        //ユーザーデフォルトを全削除する→一端削除するとコメントアウトする
+//    //    var appDomain:String = NSBundle.mainBundle().bundleIdentifier!
+//    //   myDefault.removePersistentDomainForName(appDomain)
+//
+//        //タイトル
+//        if (myDefault.objectForKey("titleList") != nil)
+//        {
+//            //データ取り出し
+//            titleList = myDefault.objectForKey("titleList") as! [Dictionary]
+//        }
+//        print(titleList)
+//        
+//        //内容
+//        if (myDefault.objectForKey("contentsHash") != nil)
+//        {
+//            //データ取り出し
+//            contentsHash = myDefault.objectForKey("contentsHash") as! [Dictionary]
+//        }
+//        print(contentsHash)
+//    
+//        //コンテンツハッシュtmpも取り出し
+//    if (myDefault.objectForKey("contentsHashTmp") != nil)
+//    {
+//        //データ取り出し
+//        contentsHashTmp = myDefault.objectForKey("contentsHashTmp") as![Dictionary<String,String>]
+//    }
+//    
 
         
         // NavigationBarを隠す処理
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         
-        //日を表示、代入祭り
-        var df = NSDateFormatter()
-        df.dateFormat = "yyyy/MM/dd"
-        var datestr = df.stringFromDate(selectedDate)
-        
-        //デバックエリアに表示
-        print("\(datestr)の日記です")
-        
-        celectedDateLabel.text = "\(datestr)"
-        
-        
-        //配列の個数だけ繰り返し表示(配列から辞書データを取り出す):タイトル
-        for dat in titleList
-        {}
+//        //日を表示、代入祭り
+//        var df = NSDateFormatter()
+//        df.dateFormat = "yyyy/MM/dd"
+//        var datestr = df.stringFromDate(selectedDate)
+//        
+//        //デバックエリアに表示
+//        print("\(datestr)の日記です")
+//        
+//        celectedDateLabel.text = "\(datestr)"
+//        
+//        
+//        //配列の個数だけ繰り返し表示(配列から辞書データを取り出す):タイトル
+//        for dat in titleList
+//        {}
+//    
+   
+    //カレンダー画面から日画面に行く時のセット
+    changeDateDisplay(0)
+    
  }
 
     
@@ -136,6 +141,9 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
     }
     
     //関数でまとめてシンプルに
+    //1.初期表示の時にセル表示
+    //2.日付変わったタイミングタイトルも変わる
+    //3.tmpの重複解決
     func changeDateDisplay(var dayChangeNumber:Int)
     {
         let cal = NSCalendar(identifier: NSCalendarIdentifierGregorian)!
@@ -163,9 +171,11 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
             myDefault.removeObjectForKey("contentsHashTmp")
         }
         
+        
+        
             //contentHashの中身をルーブで取り出し、表示日付と同じハッシュタグをcontentsHashTmp(メンバ変数)に追加
              //for 文
-            for contentsHashEach in contentsHash {
+        for contentsHashEach in contentsHash {
                 //データの日付と選んだ日付が同じ場合、
                 if (contentsHashEach["date"] == datestr){
                 
@@ -176,14 +186,67 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
 
                     }
 
+        }
+        
+        // 該当データがなかった場合、一行追加しておく
+        if contentsHashTmp.count == 0 {
+            var newHash:Dictionary = ["date":datestr,"contents":""]
+            contentsHashTmp.append(newHash)
+        }
+        
+        
+        //タイトルを表示
+        //まっさらにして見つけたら今のやつを表示
+      //  diaryList.removeAll()
+        
+        //var myDefault = NSUserDefaults.standardUserDefaults()
+//        
+//        if (myDefault.objectForKey("diaryList") != nil)
+//        {
+//            //ユーザーデフォルトを削除する
+//            //キー指定
+//            myDefault.removeObjectForKey("diaryList")
+//        }
+        
+        //タイトルのテキストを一回クリアして表示
+        diaryTitle.text = ""
+        
+        //タイトル
+        
+        
+        //diaryListの中身をルーブで取り出し、表示日付と同じハッシュタグをdiaryList(メンバ変数)に追加
+        //for 文
+        
+        
+        if (myDefault.objectForKey("titleList") != nil)
+        {
+            //データ取り出し
+            titleList = myDefault.objectForKey("titleList") as! [Dictionary]
+        }
+        print(titleList)
+        
+
+        for diaryListEach in titleList {
+            print("\(diaryListEach)")
+            
+            //データの日付と選んだ日付が同じ場合、
+            if (diaryListEach["date"] == datestr){
+                
+                
+               diaryTitle.text = diaryListEach["title"]
+                
+         
             }
+            
+        }
+        
             //UserDefaultのcontentsHashTmpにメンバ変数contentsHashTmpを保存
             //データを書き込んで
             myDefault.setObject(
                 contentsHashTmp, forKey:"contentsHashTmp")
             //即反映される
             myDefault.synchronize()
-
+        
         
         
         //  hashタグが表示されている TableViewの再読込
