@@ -36,13 +36,19 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
 
         //消す作業
         //ifで1つ以上だったら消せるっていう機能
-        if(contentsHash.count > 1){
-        if editingStyle == UITableViewCellEditingStyle.Delete {
-                contentsHash.removeAtIndex(indexPath.row)
+        if(contentsHashTmp.count > 1){
+            if editingStyle == UITableViewCellEditingStyle.Delete {
                 contentsHashTmp.removeAtIndex(indexPath.row)
-            
+                
+                var myDefault = NSUserDefaults.standardUserDefaults()
+                
+                myDefault.setObject(contentsHashTmp, forKey: "contentsHashTmp")
+                myDefault.synchronize()
+                
+                
+                
                 tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
-         }
+            }
         }
     }
         
@@ -171,7 +177,14 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
             myDefault.removeObjectForKey("contentsHashTmp")
         }
         
-        
+        //内容
+                if (myDefault.objectForKey("contentsHash") != nil)
+                {
+                    //データ取り出し
+                    contentsHash = myDefault.objectForKey("contentsHash") as! [Dictionary]
+                }
+                print(contentsHash)
+
         
             //contentHashの中身をルーブで取り出し、表示日付と同じハッシュタグをcontentsHashTmp(メンバ変数)に追加
              //for 文
@@ -294,7 +307,6 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
             //stringは文字
             var savedDate = dat["date"] as! String!
             var savedTitle = dat["title"] as! String!
-            
             
            
             //日を表示、代入祭り

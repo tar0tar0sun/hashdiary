@@ -100,15 +100,15 @@ class hashTableViewCell: UITableViewCell,UITextFieldDelegate
          dayVC.contentsHash.append(newHash)
         
         var myDefault = NSUserDefaults.standardUserDefaults()
-        var contentsHashTmp:[Dictionary<String,String>] = []
+       // var contentsHashTmp:[Dictionary<String,String>] = []
         //内容
         if (myDefault.objectForKey("contentsHashTmp") != nil)
         {
             //データ取り出し
-            contentsHashTmp = myDefault.objectForKey("contentsHashTmp") as![Dictionary<String,String>]
+            dayVC.contentsHashTmp = myDefault.objectForKey("contentsHashTmp") as![Dictionary<String,String>]
         }
-        contentsHashTmp.append(newHash)
-        myDefault.setObject(contentsHashTmp, forKey: "contentsHashTmp")
+        dayVC.contentsHashTmp.append(newHash)
+        myDefault.setObject(dayVC.contentsHashTmp, forKey: "contentsHashTmp")
         myDefault.synchronize()
         
 
