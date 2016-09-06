@@ -40,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14FC971DFF3308609A2EB168 /* Pods-hashDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hashDiary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hashDiary/Pods-hashDiary.debug.xcconfig"; sourceTree = "<group>"; };
+		32AA6185CF2E36F5CF599952 /* Pods-hashDiaryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hashDiaryUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hashDiaryUITests/Pods-hashDiaryUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4914FFE81D61A1280054970E /* CalculateCalendarLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculateCalendarLogic.swift; sourceTree = "<group>"; };
 		493D010C1D62DB1D007676CB /* dayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dayViewController.swift; sourceTree = "<group>"; };
 		49567E921D61A5C900C1F6CC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -58,7 +60,14 @@
 		4969C51C1D5DB15600782FE6 /* DeviseSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviseSize.swift; sourceTree = "<group>"; };
 		498FD5A41D65813F0012CE4B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		498FD5A61D659C9F0012CE4B /* hashTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hashTableViewCell.swift; sourceTree = "<group>"; };
+		49A022F31D7E9E2B00F6C5DB /* hashDiary-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "hashDiary-Bridging-Header.h"; sourceTree = "<group>"; };
+		49A022F41D7E9E2B00F6C5DB /* hashDiaryTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "hashDiaryTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		49A022F51D7E9E2B00F6C5DB /* hashDiaryUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "hashDiaryUITests-Bridging-Header.h"; sourceTree = "<group>"; };
 		49B583771D76B3E700F7531C /* searchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchViewController.swift; sourceTree = "<group>"; };
+		54F9D86F705C191DA5229644 /* Pods-hashDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hashDiary.release.xcconfig"; path = "Pods/Target Support Files/Pods-hashDiary/Pods-hashDiary.release.xcconfig"; sourceTree = "<group>"; };
+		6F551E6C491AEFAE8E9BC8A9 /* Pods-hashDiaryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hashDiaryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hashDiaryTests/Pods-hashDiaryTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BDFC21597A59DDF118BF9098 /* Pods-hashDiaryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hashDiaryUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-hashDiaryUITests/Pods-hashDiaryUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CEB65B7AFF97AA8CE2929AA6 /* Pods-hashDiaryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hashDiaryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-hashDiaryTests/Pods-hashDiaryTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,11 +99,16 @@
 		4969C4E21D5DA94C00782FE6 = {
 			isa = PBXGroup;
 			children = (
+				49A022F31D7E9E2B00F6C5DB /* hashDiary-Bridging-Header.h */,
+				49A022F41D7E9E2B00F6C5DB /* hashDiaryTests-Bridging-Header.h */,
+				49A022F51D7E9E2B00F6C5DB /* hashDiaryUITests-Bridging-Header.h */,
 				498FD5A41D65813F0012CE4B /* QuartzCore.framework */,
 				4969C4ED1D5DA94C00782FE6 /* hashDiary */,
 				4969C5021D5DA94D00782FE6 /* hashDiaryTests */,
 				4969C50D1D5DA94D00782FE6 /* hashDiaryUITests */,
 				4969C4EC1D5DA94C00782FE6 /* Products */,
+				E3C8DD2473BA987F2912673B /* Pods */,
+				674B5D790EABC695A14C7967 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,6 +158,26 @@
 			path = hashDiaryUITests;
 			sourceTree = "<group>";
 		};
+		674B5D790EABC695A14C7967 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E3C8DD2473BA987F2912673B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				14FC971DFF3308609A2EB168 /* Pods-hashDiary.debug.xcconfig */,
+				54F9D86F705C191DA5229644 /* Pods-hashDiary.release.xcconfig */,
+				6F551E6C491AEFAE8E9BC8A9 /* Pods-hashDiaryTests.debug.xcconfig */,
+				CEB65B7AFF97AA8CE2929AA6 /* Pods-hashDiaryTests.release.xcconfig */,
+				32AA6185CF2E36F5CF599952 /* Pods-hashDiaryUITests.debug.xcconfig */,
+				BDFC21597A59DDF118BF9098 /* Pods-hashDiaryUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,9 +185,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4969C5131D5DA94D00782FE6 /* Build configuration list for PBXNativeTarget "hashDiary" */;
 			buildPhases = (
+				042D29FC967EAD743ED278BB /* [CP] Check Pods Manifest.lock */,
 				4969C4E71D5DA94C00782FE6 /* Sources */,
 				4969C4E81D5DA94C00782FE6 /* Frameworks */,
 				4969C4E91D5DA94C00782FE6 /* Resources */,
+				F8924A2CBA5828149F606EE7 /* [CP] Embed Pods Frameworks */,
+				57FA1750C8D864F494088E59 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -168,9 +205,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4969C5161D5DA94D00782FE6 /* Build configuration list for PBXNativeTarget "hashDiaryTests" */;
 			buildPhases = (
+				517008AD336609671789A04D /* [CP] Check Pods Manifest.lock */,
 				4969C4FB1D5DA94D00782FE6 /* Sources */,
 				4969C4FC1D5DA94D00782FE6 /* Frameworks */,
 				4969C4FD1D5DA94D00782FE6 /* Resources */,
+				C6E990368306ADAD0FBE916E /* [CP] Embed Pods Frameworks */,
+				F63342E0A74603E157D8588A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -186,9 +226,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4969C5191D5DA94D00782FE6 /* Build configuration list for PBXNativeTarget "hashDiaryUITests" */;
 			buildPhases = (
+				37BD3F819A186259AD57E239 /* [CP] Check Pods Manifest.lock */,
 				4969C5061D5DA94D00782FE6 /* Sources */,
 				4969C5071D5DA94D00782FE6 /* Frameworks */,
 				4969C5081D5DA94D00782FE6 /* Resources */,
+				CF33E3D75D6BE5DFAA354368 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -206,7 +248,7 @@
 		4969C4E31D5DA94C00782FE6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "浅田真太郎";
 				TargetAttributes = {
@@ -272,6 +314,129 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		042D29FC967EAD743ED278BB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		37BD3F819A186259AD57E239 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		517008AD336609671789A04D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		57FA1750C8D864F494088E59 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hashDiary/Pods-hashDiary-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6E990368306ADAD0FBE916E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hashDiaryTests/Pods-hashDiaryTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF33E3D75D6BE5DFAA354368 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hashDiaryUITests/Pods-hashDiaryUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F63342E0A74603E157D8588A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hashDiaryTests/Pods-hashDiaryTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8924A2CBA5828149F606EE7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hashDiary/Pods-hashDiary-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4969C4E71D5DA94C00782FE6 /* Sources */ = {
@@ -416,71 +581,91 @@
 		};
 		4969C5141D5DA94D00782FE6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14FC971DFF3308609A2EB168 /* Pods-hashDiary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				HEADER_SEARCH_PATHS = "Pods/**";
 				INFOPLIST_FILE = hashDiary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shintaro-asada.hashDiary";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "hashDiary-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		4969C5151D5DA94D00782FE6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54F9D86F705C191DA5229644 /* Pods-hashDiary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				HEADER_SEARCH_PATHS = "Pods/**";
 				INFOPLIST_FILE = hashDiary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shintaro-asada.hashDiary";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "hashDiary-Bridging-Header.h";
 			};
 			name = Release;
 		};
 		4969C5171D5DA94D00782FE6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F551E6C491AEFAE8E9BC8A9 /* Pods-hashDiaryTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = hashDiaryTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shintaro-asada.hashDiaryTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "hashDiaryTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/hashDiary.app/hashDiary";
 			};
 			name = Debug;
 		};
 		4969C5181D5DA94D00782FE6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEB65B7AFF97AA8CE2929AA6 /* Pods-hashDiaryTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = hashDiaryTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shintaro-asada.hashDiaryTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "hashDiaryTests-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/hashDiary.app/hashDiary";
 			};
 			name = Release;
 		};
 		4969C51A1D5DA94D00782FE6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32AA6185CF2E36F5CF599952 /* Pods-hashDiaryUITests.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = hashDiaryUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shintaro-asada.hashDiaryUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "hashDiaryUITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_TARGET_NAME = hashDiary;
 				USES_XCTRUNNER = YES;
 			};
@@ -488,11 +673,14 @@
 		};
 		4969C51B1D5DA94D00782FE6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDFC21597A59DDF118BF9098 /* Pods-hashDiaryUITests.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = hashDiaryUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shintaro-asada.hashDiaryUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "hashDiaryUITests-Bridging-Header.h";
 				TEST_TARGET_NAME = hashDiary;
 				USES_XCTRUNNER = YES;
 			};

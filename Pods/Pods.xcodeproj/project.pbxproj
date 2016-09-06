@@ -1,0 +1,966 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0039EEF8B31575F0A84A492BA8089E7D /* FAKFoundationIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = D004968535ECFB94A738EB291EDD2D88 /* FAKFoundationIcons.m */; };
+		0118A4E274FD19D1A1E0D1C88C00AE2C /* Pods-hashDiary-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 29F3213CD88ECA9D9F959FA9B51269B5 /* Pods-hashDiary-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0308B2902DB5695DBD6AD4564FCBD4F2 /* FAKIonIcons.h in Headers */ = {isa = PBXBuildFile; fileRef = 173C5F5F82175DBBD63F16A31A50F3C9 /* FAKIonIcons.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0BB98356E0F34911A7C012CC0C120306 /* Pods-hashDiary-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FFCBA2F9FE16C3C22A500C03F9FA946 /* Pods-hashDiary-dummy.m */; };
+		109B7C92FE10DCE41D1A2E89824374D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36AEF61D43D41269BA24FCD70FB8BE98 /* Foundation.framework */; };
+		29DB8AAB20B9088A34901CEC43319146 /* FAKIonIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = FFCFDD2307310B018C64E6E99F8A8671 /* FAKIonIcons.m */; };
+		337166F44CD41FBD5074A886981DE532 /* zocial-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C588EDFEB84C0F46E259AF0517FEAEB /* zocial-regular-webfont.ttf */; };
+		3959AEE0134F0E863AC4DB059BAF0C9F /* FAKIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7AFD482573C41230F622CD6D5C4336 /* FAKIcon.m */; };
+		4B16394C45E21375095CC3BC7E1EA1BF /* Pods-hashDiaryTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ACB5DB84A2260F43749800DF3A1EDFD /* Pods-hashDiaryTests-dummy.m */; };
+		4D0A629CE4BBE939EDDD845E425CCFE9 /* Pods-hashDiaryUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3109B5AB0E305688D25BA85782FE66EC /* Pods-hashDiaryUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A084EEAD754D6A50378E26C789F5A51 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E08379A0DC830C1B585DFE85C4E677 /* UIKit.framework */; };
+		60FD66A0C4A398F6DF3E89C15E01EB64 /* foundation-icons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 348D9899C488F42FFA76E76CACE5CFDD /* foundation-icons.ttf */; };
+		650E9C1297EAE9A8E153D5F4FD3FFF51 /* FontAwesomeKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EC2A80CA854E52192F79C5CC5E596F3B /* FontAwesomeKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6AE7C0A8FC2E60CBBD78330191605961 /* Pods-hashDiaryTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 32AC15489A5E619A762756B85286B8CA /* Pods-hashDiaryTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7684852F540BB5B520A48E7FDDD20D8B /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 832585F8BBCEC2ADDFEA40259182113F /* ionicons.ttf */; };
+		8C85811AF68F67C86F60CD2F32648218 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36AEF61D43D41269BA24FCD70FB8BE98 /* Foundation.framework */; };
+		8FF68AEC20BF30072F4AD866513FE44E /* FAKFoundationIcons.h in Headers */ = {isa = PBXBuildFile; fileRef = 13C8F17AC572905C43A9EDC40D9C9C0C /* FAKFoundationIcons.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A37E4933BC6CB5D541B5AC4521631878 /* FAKZocial.h in Headers */ = {isa = PBXBuildFile; fileRef = EBEEF080EEE770242D282A426AA49A0D /* FAKZocial.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ABB21234D3E5F7FF57E9E4F54532B9D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36AEF61D43D41269BA24FCD70FB8BE98 /* Foundation.framework */; };
+		B67729C8F962F6D92B999E1279EE7527 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36AEF61D43D41269BA24FCD70FB8BE98 /* Foundation.framework */; };
+		BC96108EBCE6F29BACA0662BC5B15254 /* FontAwesomeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F3F86521930F6EB1AE6875F5183681F /* FontAwesomeKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C59A78C9247621B660AE7AAD46E82446 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9B87BB18FC41140CF9A78D48A09A4258 /* FontAwesome.otf */; };
+		D140AE94F6E42075FEC37162DD5F36D9 /* FAKFontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 4626FCBB0168E3243C9D24A190D56089 /* FAKFontAwesome.m */; };
+		D8B25CA4E48EEE4831E896F4077A6D3A /* FontAwesomeKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D6F471A46B7F8E69FD93C06AA48051 /* FontAwesomeKit-dummy.m */; };
+		DBD220F2A48C1644E5E1ACF39E20350B /* FAKZocial.m in Sources */ = {isa = PBXBuildFile; fileRef = 782020E831E6E4DC207949E494D3D565 /* FAKZocial.m */; };
+		DE3DCC4AE076C2D03D0F653042DA357E /* Pods-hashDiaryUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 527826962FCA71284FA0517039AD3053 /* Pods-hashDiaryUITests-dummy.m */; };
+		DFDAB04F787BC7FB9EA75BDB0E773937 /* FAKFontAwesome.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E9029C37C49E056FA8D0B5E5A1A8CA6 /* FAKFontAwesome.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F41CB5FFBB71B707F5CE8F5C23F3F895 /* FAKIcon.h in Headers */ = {isa = PBXBuildFile; fileRef = 07CD3AC7F01C217528E9ECE9B4405D41 /* FAKIcon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F6EA84588DAC976B9455D3948E884167 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03400C0CD6ED48B34D5902A1A473F402 /* CoreText.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D9990651CC05738A6FCF4CA0435201A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8BE9D4B6FF6D92923152CB0534F2BB94;
+			remoteInfo = FontAwesomeKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03400C0CD6ED48B34D5902A1A473F402 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
+		07CD3AC7F01C217528E9ECE9B4405D41 /* FAKIcon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FAKIcon.h; path = FontAwesomeKit/FAKIcon.h; sourceTree = "<group>"; };
+		090BA383AD63CFD94D936E49615FE043 /* Pods_hashDiaryUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hashDiaryUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C588EDFEB84C0F46E259AF0517FEAEB /* zocial-regular-webfont.ttf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = "zocial-regular-webfont.ttf"; path = "FontAwesomeKit/zocial-regular-webfont.ttf"; sourceTree = "<group>"; };
+		131045D37A093244BDC43CFE62DFFE9F /* Pods-hashDiaryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-hashDiaryUITests.release.xcconfig"; sourceTree = "<group>"; };
+		13C8F17AC572905C43A9EDC40D9C9C0C /* FAKFoundationIcons.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FAKFoundationIcons.h; path = FontAwesomeKit/FAKFoundationIcons.h; sourceTree = "<group>"; };
+		173C5F5F82175DBBD63F16A31A50F3C9 /* FAKIonIcons.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FAKIonIcons.h; path = FontAwesomeKit/FAKIonIcons.h; sourceTree = "<group>"; };
+		17E08379A0DC830C1B585DFE85C4E677 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		1F2A0CE87E4FED50B473D309D00B95AF /* FontAwesomeKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FontAwesomeKit-prefix.pch"; sourceTree = "<group>"; };
+		2062E240DE9FDF107FBA7ED54A083FD7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29F3213CD88ECA9D9F959FA9B51269B5 /* Pods-hashDiary-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-hashDiary-umbrella.h"; sourceTree = "<group>"; };
+		2AB30C814A8D3CF7A1FF54D7372E4494 /* Pods-hashDiary-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-hashDiary-resources.sh"; sourceTree = "<group>"; };
+		3109B5AB0E305688D25BA85782FE66EC /* Pods-hashDiaryUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-hashDiaryUITests-umbrella.h"; sourceTree = "<group>"; };
+		32AC15489A5E619A762756B85286B8CA /* Pods-hashDiaryTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-hashDiaryTests-umbrella.h"; sourceTree = "<group>"; };
+		32DCA9C7B4C7C28D140B08A86626E2EB /* Pods-hashDiaryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-hashDiaryTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3331DBCDB85DD8E95B307F5D23A52876 /* Pods-hashDiaryTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-hashDiaryTests.modulemap"; sourceTree = "<group>"; };
+		348D9899C488F42FFA76E76CACE5CFDD /* foundation-icons.ttf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = "foundation-icons.ttf"; path = "FontAwesomeKit/foundation-icons.ttf"; sourceTree = "<group>"; };
+		35386948385529461806E1F777AD762D /* Pods-hashDiaryUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-hashDiaryUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		36AEF61D43D41269BA24FCD70FB8BE98 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		4626FCBB0168E3243C9D24A190D56089 /* FAKFontAwesome.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FAKFontAwesome.m; path = FontAwesomeKit/FAKFontAwesome.m; sourceTree = "<group>"; };
+		49ABD4BB8AB6EC6AD39C51A2CB026BB7 /* Pods_hashDiaryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hashDiaryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5262B8B7FDDE93FBA64F0063315F687A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		527826962FCA71284FA0517039AD3053 /* Pods-hashDiaryUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-hashDiaryUITests-dummy.m"; sourceTree = "<group>"; };
+		588081E5D4506D6A77830DE629CB4645 /* Pods_hashDiary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hashDiary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FFCBA2F9FE16C3C22A500C03F9FA946 /* Pods-hashDiary-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-hashDiary-dummy.m"; sourceTree = "<group>"; };
+		685B26F019F5D48252ABA539D23D8A47 /* FontAwesomeKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FontAwesomeKit.modulemap; sourceTree = "<group>"; };
+		6AA57FF14CBE902C12E6163DB158E11B /* Pods-hashDiary-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-hashDiary-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6ACB5DB84A2260F43749800DF3A1EDFD /* Pods-hashDiaryTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-hashDiaryTests-dummy.m"; sourceTree = "<group>"; };
+		7181E6C28891750A466C5D7BF9F07674 /* Pods-hashDiaryUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-hashDiaryUITests.modulemap"; sourceTree = "<group>"; };
+		782020E831E6E4DC207949E494D3D565 /* FAKZocial.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FAKZocial.m; path = FontAwesomeKit/FAKZocial.m; sourceTree = "<group>"; };
+		7E9029C37C49E056FA8D0B5E5A1A8CA6 /* FAKFontAwesome.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FAKFontAwesome.h; path = FontAwesomeKit/FAKFontAwesome.h; sourceTree = "<group>"; };
+		803E0C9CACFCF073B9F80B648EA62B43 /* Pods-hashDiaryTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-hashDiaryTests-resources.sh"; sourceTree = "<group>"; };
+		832585F8BBCEC2ADDFEA40259182113F /* ionicons.ttf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = ionicons.ttf; path = FontAwesomeKit/ionicons.ttf; sourceTree = "<group>"; };
+		86944AC9BEA4B2DC1D1BE28F22F568DE /* Pods-hashDiary-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-hashDiary-frameworks.sh"; sourceTree = "<group>"; };
+		8D499E970660E5DB6C3BFE26F75C4FAF /* Pods-hashDiaryUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-hashDiaryUITests-frameworks.sh"; sourceTree = "<group>"; };
+		8F3F86521930F6EB1AE6875F5183681F /* FontAwesomeKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FontAwesomeKit.h; path = FontAwesomeKit/FontAwesomeKit.h; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93C221E2D5D9135C72E03CB07C947B37 /* Pods-hashDiaryTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-hashDiaryTests-frameworks.sh"; sourceTree = "<group>"; };
+		97A230A2E4B1C7235A98B86B120D44FC /* Pods-hashDiaryUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-hashDiaryUITests-resources.sh"; sourceTree = "<group>"; };
+		9B87BB18FC41140CF9A78D48A09A4258 /* FontAwesome.otf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = FontAwesome.otf; path = FontAwesomeKit/FontAwesome.otf; sourceTree = "<group>"; };
+		9E505B331E476523B1F9DDFC75016825 /* Pods-hashDiaryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-hashDiaryUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B036154658CB2BCA0A8355F9C02888DA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6A93CC38769ADB27457D5A120C44FA9 /* Pods-hashDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-hashDiary.debug.xcconfig"; sourceTree = "<group>"; };
+		BE34D49D730C87D57AF1780AC8FDFF3C /* Pods-hashDiaryTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-hashDiaryTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		BE7AFD482573C41230F622CD6D5C4336 /* FAKIcon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FAKIcon.m; path = FontAwesomeKit/FAKIcon.m; sourceTree = "<group>"; };
+		BFFA9ECFE7693412949350F6533E25D2 /* FontAwesomeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FontAwesomeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C36A6943304EE8034A7AB2F25EC40A78 /* Pods-hashDiaryUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-hashDiaryUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		C86204890554595CB8B79E1EDE82FB4F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D004968535ECFB94A738EB291EDD2D88 /* FAKFoundationIcons.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FAKFoundationIcons.m; path = FontAwesomeKit/FAKFoundationIcons.m; sourceTree = "<group>"; };
+		D8D6F471A46B7F8E69FD93C06AA48051 /* FontAwesomeKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FontAwesomeKit-dummy.m"; sourceTree = "<group>"; };
+		DD8F3054EB27322E6A5D4D6EA85278A2 /* Pods-hashDiary-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-hashDiary-acknowledgements.plist"; sourceTree = "<group>"; };
+		EBEEF080EEE770242D282A426AA49A0D /* FAKZocial.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FAKZocial.h; path = FontAwesomeKit/FAKZocial.h; sourceTree = "<group>"; };
+		EC2A80CA854E52192F79C5CC5E596F3B /* FontAwesomeKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FontAwesomeKit-umbrella.h"; sourceTree = "<group>"; };
+		EE64D67730295883E992D58D6216C96D /* FontAwesomeKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FontAwesomeKit.xcconfig; sourceTree = "<group>"; };
+		F49444BB5285D754B5E5806DB29D68DE /* Pods-hashDiaryTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-hashDiaryTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FA673956053BA92A071027206C706F30 /* Pods-hashDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-hashDiary.release.xcconfig"; sourceTree = "<group>"; };
+		FB55FA6F198FD43B03651D7C5446F6A4 /* Pods-hashDiary.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-hashDiary.modulemap"; sourceTree = "<group>"; };
+		FE8201831BF7318EF8448C159184FA57 /* Pods-hashDiaryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-hashDiaryTests.release.xcconfig"; sourceTree = "<group>"; };
+		FFCFDD2307310B018C64E6E99F8A8671 /* FAKIonIcons.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FAKIonIcons.m; path = FontAwesomeKit/FAKIonIcons.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3C9550AB6D56A7830662A6D8B0C8B3DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6EA84588DAC976B9455D3948E884167 /* CoreText.framework in Frameworks */,
+				B67729C8F962F6D92B999E1279EE7527 /* Foundation.framework in Frameworks */,
+				5A084EEAD754D6A50378E26C789F5A51 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B81A07185CB189D9B84501DCC787483 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C85811AF68F67C86F60CD2F32648218 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1263048132393ED394EC92BA2FFC815 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				109B7C92FE10DCE41D1A2E89824374D0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F03B9BEADE81AB0F0C3B9CF39ADBA056 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABB21234D3E5F7FF57E9E4F54532B9D6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		119D7D439DFEA95D5C6B2E6AB322724A /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				03400C0CD6ED48B34D5902A1A473F402 /* CoreText.framework */,
+				36AEF61D43D41269BA24FCD70FB8BE98 /* Foundation.framework */,
+				17E08379A0DC830C1B585DFE85C4E677 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				119D7D439DFEA95D5C6B2E6AB322724A /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1589228300985958601859BEF09F14D0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0C588EDFEB84C0F46E259AF0517FEAEB /* zocial-regular-webfont.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1BD01B63DA88D32EA51F1BC7C9F0B5B9 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A41B48D72D6AC9772DEE0E56029D1D91 /* Pods-hashDiary */,
+				2273B300ED05BDF68FF6B52A2A381EED /* Pods-hashDiaryTests */,
+				AC5B2A0C95969FFA47934968D7378FFF /* Pods-hashDiaryUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		1D0508A1D6FCFF81008E93D7B12FB3CF /* IonIcons */ = {
+			isa = PBXGroup;
+			children = (
+				173C5F5F82175DBBD63F16A31A50F3C9 /* FAKIonIcons.h */,
+				FFCFDD2307310B018C64E6E99F8A8671 /* FAKIonIcons.m */,
+				9D08F4BD8511737564CD04D163AFBC99 /* Resources */,
+			);
+			name = IonIcons;
+			sourceTree = "<group>";
+		};
+		2273B300ED05BDF68FF6B52A2A381EED /* Pods-hashDiaryTests */ = {
+			isa = PBXGroup;
+			children = (
+				C86204890554595CB8B79E1EDE82FB4F /* Info.plist */,
+				3331DBCDB85DD8E95B307F5D23A52876 /* Pods-hashDiaryTests.modulemap */,
+				F49444BB5285D754B5E5806DB29D68DE /* Pods-hashDiaryTests-acknowledgements.markdown */,
+				BE34D49D730C87D57AF1780AC8FDFF3C /* Pods-hashDiaryTests-acknowledgements.plist */,
+				6ACB5DB84A2260F43749800DF3A1EDFD /* Pods-hashDiaryTests-dummy.m */,
+				93C221E2D5D9135C72E03CB07C947B37 /* Pods-hashDiaryTests-frameworks.sh */,
+				803E0C9CACFCF073B9F80B648EA62B43 /* Pods-hashDiaryTests-resources.sh */,
+				32AC15489A5E619A762756B85286B8CA /* Pods-hashDiaryTests-umbrella.h */,
+				32DCA9C7B4C7C28D140B08A86626E2EB /* Pods-hashDiaryTests.debug.xcconfig */,
+				FE8201831BF7318EF8448C159184FA57 /* Pods-hashDiaryTests.release.xcconfig */,
+			);
+			name = "Pods-hashDiaryTests";
+			path = "Target Support Files/Pods-hashDiaryTests";
+			sourceTree = "<group>";
+		};
+		231C7D4898106D08C13D4D7DCA2C898B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9B87BB18FC41140CF9A78D48A09A4258 /* FontAwesome.otf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		2DEB40EFC6B33FC581818C438F7FB49E /* FontAwesomeKit */ = {
+			isa = PBXGroup;
+			children = (
+				8F3F86521930F6EB1AE6875F5183681F /* FontAwesomeKit.h */,
+				74055A6E45060562757C9281617BB429 /* Core */,
+				491A0C7BB7D0C35A38ADC15A7D1712B0 /* FontAwesome */,
+				CC5A2803E0C2003CA3BAFF927DB9143B /* FoundationIcons */,
+				1D0508A1D6FCFF81008E93D7B12FB3CF /* IonIcons */,
+				637D9C04527AF65B5B73A278A5A252E6 /* Support Files */,
+				DD574FC726AFB6CFF2FFB63F328CAB9D /* Zocial */,
+			);
+			path = FontAwesomeKit;
+			sourceTree = "<group>";
+		};
+		491A0C7BB7D0C35A38ADC15A7D1712B0 /* FontAwesome */ = {
+			isa = PBXGroup;
+			children = (
+				7E9029C37C49E056FA8D0B5E5A1A8CA6 /* FAKFontAwesome.h */,
+				4626FCBB0168E3243C9D24A190D56089 /* FAKFontAwesome.m */,
+				231C7D4898106D08C13D4D7DCA2C898B /* Resources */,
+			);
+			name = FontAwesome;
+			sourceTree = "<group>";
+		};
+		56C96C1E5A3F511342C21BB2DEDC5AA4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2DEB40EFC6B33FC581818C438F7FB49E /* FontAwesomeKit */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		637D9C04527AF65B5B73A278A5A252E6 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				685B26F019F5D48252ABA539D23D8A47 /* FontAwesomeKit.modulemap */,
+				EE64D67730295883E992D58D6216C96D /* FontAwesomeKit.xcconfig */,
+				D8D6F471A46B7F8E69FD93C06AA48051 /* FontAwesomeKit-dummy.m */,
+				1F2A0CE87E4FED50B473D309D00B95AF /* FontAwesomeKit-prefix.pch */,
+				EC2A80CA854E52192F79C5CC5E596F3B /* FontAwesomeKit-umbrella.h */,
+				5262B8B7FDDE93FBA64F0063315F687A /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FontAwesomeKit";
+			sourceTree = "<group>";
+		};
+		74055A6E45060562757C9281617BB429 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				07CD3AC7F01C217528E9ECE9B4405D41 /* FAKIcon.h */,
+				BE7AFD482573C41230F622CD6D5C4336 /* FAKIcon.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
+				56C96C1E5A3F511342C21BB2DEDC5AA4 /* Pods */,
+				E598026BA949530E09EE26869ED6E134 /* Products */,
+				1BD01B63DA88D32EA51F1BC7C9F0B5B9 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		93FAA6AD0D62DBC3FF7930989327D1D2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				348D9899C488F42FFA76E76CACE5CFDD /* foundation-icons.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		9D08F4BD8511737564CD04D163AFBC99 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				832585F8BBCEC2ADDFEA40259182113F /* ionicons.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		A41B48D72D6AC9772DEE0E56029D1D91 /* Pods-hashDiary */ = {
+			isa = PBXGroup;
+			children = (
+				B036154658CB2BCA0A8355F9C02888DA /* Info.plist */,
+				FB55FA6F198FD43B03651D7C5446F6A4 /* Pods-hashDiary.modulemap */,
+				6AA57FF14CBE902C12E6163DB158E11B /* Pods-hashDiary-acknowledgements.markdown */,
+				DD8F3054EB27322E6A5D4D6EA85278A2 /* Pods-hashDiary-acknowledgements.plist */,
+				5FFCBA2F9FE16C3C22A500C03F9FA946 /* Pods-hashDiary-dummy.m */,
+				86944AC9BEA4B2DC1D1BE28F22F568DE /* Pods-hashDiary-frameworks.sh */,
+				2AB30C814A8D3CF7A1FF54D7372E4494 /* Pods-hashDiary-resources.sh */,
+				29F3213CD88ECA9D9F959FA9B51269B5 /* Pods-hashDiary-umbrella.h */,
+				B6A93CC38769ADB27457D5A120C44FA9 /* Pods-hashDiary.debug.xcconfig */,
+				FA673956053BA92A071027206C706F30 /* Pods-hashDiary.release.xcconfig */,
+			);
+			name = "Pods-hashDiary";
+			path = "Target Support Files/Pods-hashDiary";
+			sourceTree = "<group>";
+		};
+		AC5B2A0C95969FFA47934968D7378FFF /* Pods-hashDiaryUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2062E240DE9FDF107FBA7ED54A083FD7 /* Info.plist */,
+				7181E6C28891750A466C5D7BF9F07674 /* Pods-hashDiaryUITests.modulemap */,
+				35386948385529461806E1F777AD762D /* Pods-hashDiaryUITests-acknowledgements.markdown */,
+				C36A6943304EE8034A7AB2F25EC40A78 /* Pods-hashDiaryUITests-acknowledgements.plist */,
+				527826962FCA71284FA0517039AD3053 /* Pods-hashDiaryUITests-dummy.m */,
+				8D499E970660E5DB6C3BFE26F75C4FAF /* Pods-hashDiaryUITests-frameworks.sh */,
+				97A230A2E4B1C7235A98B86B120D44FC /* Pods-hashDiaryUITests-resources.sh */,
+				3109B5AB0E305688D25BA85782FE66EC /* Pods-hashDiaryUITests-umbrella.h */,
+				9E505B331E476523B1F9DDFC75016825 /* Pods-hashDiaryUITests.debug.xcconfig */,
+				131045D37A093244BDC43CFE62DFFE9F /* Pods-hashDiaryUITests.release.xcconfig */,
+			);
+			name = "Pods-hashDiaryUITests";
+			path = "Target Support Files/Pods-hashDiaryUITests";
+			sourceTree = "<group>";
+		};
+		CC5A2803E0C2003CA3BAFF927DB9143B /* FoundationIcons */ = {
+			isa = PBXGroup;
+			children = (
+				13C8F17AC572905C43A9EDC40D9C9C0C /* FAKFoundationIcons.h */,
+				D004968535ECFB94A738EB291EDD2D88 /* FAKFoundationIcons.m */,
+				93FAA6AD0D62DBC3FF7930989327D1D2 /* Resources */,
+			);
+			name = FoundationIcons;
+			sourceTree = "<group>";
+		};
+		DD574FC726AFB6CFF2FFB63F328CAB9D /* Zocial */ = {
+			isa = PBXGroup;
+			children = (
+				EBEEF080EEE770242D282A426AA49A0D /* FAKZocial.h */,
+				782020E831E6E4DC207949E494D3D565 /* FAKZocial.m */,
+				1589228300985958601859BEF09F14D0 /* Resources */,
+			);
+			name = Zocial;
+			sourceTree = "<group>";
+		};
+		E598026BA949530E09EE26869ED6E134 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BFFA9ECFE7693412949350F6533E25D2 /* FontAwesomeKit.framework */,
+				588081E5D4506D6A77830DE629CB4645 /* Pods_hashDiary.framework */,
+				49ABD4BB8AB6EC6AD39C51A2CB026BB7 /* Pods_hashDiaryTests.framework */,
+				090BA383AD63CFD94D936E49615FE043 /* Pods_hashDiaryUITests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		508C2B8B2D0ECEA4C137D56F85F26F45 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0118A4E274FD19D1A1E0D1C88C00AE2C /* Pods-hashDiary-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F13AC94D6FD8F68E2DDEC39606A62DA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D0A629CE4BBE939EDDD845E425CCFE9 /* Pods-hashDiaryUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0FD4C7BBA6628AECC611B6F02ADC782 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFDAB04F787BC7FB9EA75BDB0E773937 /* FAKFontAwesome.h in Headers */,
+				8FF68AEC20BF30072F4AD866513FE44E /* FAKFoundationIcons.h in Headers */,
+				F41CB5FFBB71B707F5CE8F5C23F3F895 /* FAKIcon.h in Headers */,
+				0308B2902DB5695DBD6AD4564FCBD4F2 /* FAKIonIcons.h in Headers */,
+				A37E4933BC6CB5D541B5AC4521631878 /* FAKZocial.h in Headers */,
+				650E9C1297EAE9A8E153D5F4FD3FFF51 /* FontAwesomeKit-umbrella.h in Headers */,
+				BC96108EBCE6F29BACA0662BC5B15254 /* FontAwesomeKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9734C705216317FC92E060BB2508C26 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AE7C0A8FC2E60CBBD78330191605961 /* Pods-hashDiaryTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		190FC84C45C235BD714B12032484E651 /* Pods-hashDiaryUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13DC4250D51C55F021E89D8BF1BD3734 /* Build configuration list for PBXNativeTarget "Pods-hashDiaryUITests" */;
+			buildPhases = (
+				8D2F602E52E45FB42288A929A034C135 /* Sources */,
+				6B81A07185CB189D9B84501DCC787483 /* Frameworks */,
+				8F13AC94D6FD8F68E2DDEC39606A62DA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-hashDiaryUITests";
+			productName = "Pods-hashDiaryUITests";
+			productReference = 090BA383AD63CFD94D936E49615FE043 /* Pods_hashDiaryUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4F0E7DD55B3EC49EFFE45C5B7A5DCA40 /* Pods-hashDiaryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F05DADAA947356DF819FCC92FFD5C348 /* Build configuration list for PBXNativeTarget "Pods-hashDiaryTests" */;
+			buildPhases = (
+				E178237B52CEBF98D212212D54C138A7 /* Sources */,
+				F03B9BEADE81AB0F0C3B9CF39ADBA056 /* Frameworks */,
+				C9734C705216317FC92E060BB2508C26 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-hashDiaryTests";
+			productName = "Pods-hashDiaryTests";
+			productReference = 49ABD4BB8AB6EC6AD39C51A2CB026BB7 /* Pods_hashDiaryTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8BE9D4B6FF6D92923152CB0534F2BB94 /* FontAwesomeKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02A213487B2CA59049C1D63AF426CD3E /* Build configuration list for PBXNativeTarget "FontAwesomeKit" */;
+			buildPhases = (
+				7EEECA680190D957E28D25D28D8374BA /* Sources */,
+				3C9550AB6D56A7830662A6D8B0C8B3DC /* Frameworks */,
+				A0FD4C7BBA6628AECC611B6F02ADC782 /* Headers */,
+				2D96547AC8E532341B6E6EC8C83E9257 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FontAwesomeKit;
+			productName = FontAwesomeKit;
+			productReference = BFFA9ECFE7693412949350F6533E25D2 /* FontAwesomeKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A596092C63CC7BF66C1A5742F239F6E3 /* Pods-hashDiary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A764E7FC91C7A50E522962DA31FD9D3E /* Build configuration list for PBXNativeTarget "Pods-hashDiary" */;
+			buildPhases = (
+				333F186D9DB7413BB6A29DDEB6F49190 /* Sources */,
+				D1263048132393ED394EC92BA2FFC815 /* Frameworks */,
+				508C2B8B2D0ECEA4C137D56F85F26F45 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF23C1CA28C04DFE19690C4F04AC34E0 /* PBXTargetDependency */,
+			);
+			name = "Pods-hashDiary";
+			productName = "Pods-hashDiary";
+			productReference = 588081E5D4506D6A77830DE629CB4645 /* Pods_hashDiary.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = E598026BA949530E09EE26869ED6E134 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8BE9D4B6FF6D92923152CB0534F2BB94 /* FontAwesomeKit */,
+				A596092C63CC7BF66C1A5742F239F6E3 /* Pods-hashDiary */,
+				4F0E7DD55B3EC49EFFE45C5B7A5DCA40 /* Pods-hashDiaryTests */,
+				190FC84C45C235BD714B12032484E651 /* Pods-hashDiaryUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2D96547AC8E532341B6E6EC8C83E9257 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C59A78C9247621B660AE7AAD46E82446 /* FontAwesome.otf in Resources */,
+				60FD66A0C4A398F6DF3E89C15E01EB64 /* foundation-icons.ttf in Resources */,
+				7684852F540BB5B520A48E7FDDD20D8B /* ionicons.ttf in Resources */,
+				337166F44CD41FBD5074A886981DE532 /* zocial-regular-webfont.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		333F186D9DB7413BB6A29DDEB6F49190 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BB98356E0F34911A7C012CC0C120306 /* Pods-hashDiary-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EEECA680190D957E28D25D28D8374BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D140AE94F6E42075FEC37162DD5F36D9 /* FAKFontAwesome.m in Sources */,
+				0039EEF8B31575F0A84A492BA8089E7D /* FAKFoundationIcons.m in Sources */,
+				3959AEE0134F0E863AC4DB059BAF0C9F /* FAKIcon.m in Sources */,
+				29DB8AAB20B9088A34901CEC43319146 /* FAKIonIcons.m in Sources */,
+				DBD220F2A48C1644E5E1ACF39E20350B /* FAKZocial.m in Sources */,
+				D8B25CA4E48EEE4831E896F4077A6D3A /* FontAwesomeKit-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D2F602E52E45FB42288A929A034C135 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE3DCC4AE076C2D03D0F653042DA357E /* Pods-hashDiaryUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E178237B52CEBF98D212212D54C138A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B16394C45E21375095CC3BC7E1EA1BF /* Pods-hashDiaryTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CF23C1CA28C04DFE19690C4F04AC34E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FontAwesomeKit;
+			target = 8BE9D4B6FF6D92923152CB0534F2BB94 /* FontAwesomeKit */;
+			targetProxy = D9990651CC05738A6FCF4CA0435201A6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0C2CDBE7BD3A598BC75C4ED40DC1ADEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 131045D37A093244BDC43CFE62DFFE9F /* Pods-hashDiaryUITests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-hashDiaryUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-hashDiaryUITests/Pods-hashDiaryUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_hashDiaryUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		475488A05A7258AC8F2F1537DA1901F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E505B331E476523B1F9DDFC75016825 /* Pods-hashDiaryUITests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-hashDiaryUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-hashDiaryUITests/Pods-hashDiaryUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_hashDiaryUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		84FD87D359382A37B07149A12641B965 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		A0317B59969EF07795B228B76E70B328 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6A93CC38769ADB27457D5A120C44FA9 /* Pods-hashDiary.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-hashDiary/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-hashDiary/Pods-hashDiary.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_hashDiary;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AE0F038E6B9454A4602C3E733CBB7A0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE64D67730295883E992D58D6216C96D /* FontAwesomeKit.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FontAwesomeKit/FontAwesomeKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FontAwesomeKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FontAwesomeKit/FontAwesomeKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = FontAwesomeKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B74EE23FC96992E0C7FB67D2D0EC2D8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32DCA9C7B4C7C28D140B08A86626E2EB /* Pods-hashDiaryTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-hashDiaryTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-hashDiaryTests/Pods-hashDiaryTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_hashDiaryTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B8B9FD372EEA1312119B0E8E889EBF56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA673956053BA92A071027206C706F30 /* Pods-hashDiary.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-hashDiary/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-hashDiary/Pods-hashDiary.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_hashDiary;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CEAEC306A701B6A81CB45C2491791E68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE8201831BF7318EF8448C159184FA57 /* Pods-hashDiaryTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-hashDiaryTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-hashDiaryTests/Pods-hashDiaryTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_hashDiaryTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EE09AAE6E88468029C3E7551EBB4D974 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE64D67730295883E992D58D6216C96D /* FontAwesomeKit.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FontAwesomeKit/FontAwesomeKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FontAwesomeKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FontAwesomeKit/FontAwesomeKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = FontAwesomeKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F594C655D48020EC34B00AA63E001773 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		02A213487B2CA59049C1D63AF426CD3E /* Build configuration list for PBXNativeTarget "FontAwesomeKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE09AAE6E88468029C3E7551EBB4D974 /* Debug */,
+				AE0F038E6B9454A4602C3E733CBB7A0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13DC4250D51C55F021E89D8BF1BD3734 /* Build configuration list for PBXNativeTarget "Pods-hashDiaryUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				475488A05A7258AC8F2F1537DA1901F1 /* Debug */,
+				0C2CDBE7BD3A598BC75C4ED40DC1ADEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84FD87D359382A37B07149A12641B965 /* Debug */,
+				F594C655D48020EC34B00AA63E001773 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A764E7FC91C7A50E522962DA31FD9D3E /* Build configuration list for PBXNativeTarget "Pods-hashDiary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0317B59969EF07795B228B76E70B328 /* Debug */,
+				B8B9FD372EEA1312119B0E8E889EBF56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F05DADAA947356DF819FCC92FFD5C348 /* Build configuration list for PBXNativeTarget "Pods-hashDiaryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B74EE23FC96992E0C7FB67D2D0EC2D8F /* Debug */,
+				CEAEC306A701B6A81CB45C2491791E68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

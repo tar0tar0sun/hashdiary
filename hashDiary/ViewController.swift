@@ -206,9 +206,19 @@ class ViewController: UIViewController {
                 CGFloat(calendarLabelWidth),
                 CGFloat(calendarLabelHeight)
             )
+           
             //アプリ画面背景色：青
             //backGroundcolor = UIColor.blueColor()
-            //self.view.backgroundColor = backGroundcolor
+            
+            if month % 2 == 0{
+                backGroundcolor = UIColor.blueColor()
+            }
+            else
+            {
+                backGroundcolor = UIColor.blackColor()
+            }
+            self.view.backgroundColor = backGroundcolor
+
             
             //日曜日の場合は赤色を指定
             if (i == 0) {
@@ -230,7 +240,7 @@ class ViewController: UIViewController {
             } else {
                 
                 //既に用意されている配色パターンの場合
-                calendarBaseLabel.textColor = UIColor.lightGrayColor()
+                calendarBaseLabel.textColor = UIColor.blackColor()
                 
             }
             
@@ -334,6 +344,17 @@ class ViewController: UIViewController {
     //タイトル表記を設定する関数
     func setupCalendarTitleLabel() {
         calendarBar.text = String("\(year).\(month)")
+        
+        if month % 2 == 0{
+            backGroundcolor = UIColor.blueColor()
+        }
+        else
+        {
+            backGroundcolor = UIColor.blackColor()
+        }
+        self.view.backgroundColor = backGroundcolor
+        
+
     }
     
     //現在（初期表示時）の年月に該当するデータを取得する関数

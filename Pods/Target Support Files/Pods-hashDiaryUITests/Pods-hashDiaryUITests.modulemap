@@ -1,0 +1,6 @@
+framework module Pods_hashDiaryUITests {
+  umbrella header "Pods-hashDiaryUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

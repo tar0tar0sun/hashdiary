@@ -8,15 +8,19 @@
 
 import UIKit
 
+import UIKit
+import Photos // ★追加
 
-class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDelegate,UITextFieldDelegate
+
+class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDelegate,UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate
 {
     //名前つけて
     @IBOutlet weak var celectedDateLabel: UILabel!
     @IBOutlet weak var myTableView: UITableView!
     @IBOutlet weak var diaryTitle: UITextField!
     @IBOutlet weak var myCellView: UITableView!
-    
+    @IBOutlet weak var font: UIImageView!
+   
     
     //今日の日付を表示
     var selectedDate = NSDate()
@@ -27,6 +31,7 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
     var contentsHash = [["contents":"日記内容","date":"2016/05/13"]]
     //コンテンツテンプ名前付け
     var contentsHashTmp = [["contents":"日記内容","date":"2016/05/13"]]
+    
     
     
     // 削除の機能
@@ -45,18 +50,29 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
                 myDefault.setObject(contentsHashTmp, forKey: "contentsHashTmp")
                 myDefault.synchronize()
                 
-                
-                
                 tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
             }
         }
-    }
-        
+}
+    
+
+
+
     
        override func viewDidLoad()
  {
         super.viewDidLoad()
         
+    //フォントオーサムでアイコンづけ
+    let camera = FAKFontAwesome.trashIconWithSize(40)
+    // 下記でアイコンの色も変えられます
+    // trash.addAttribute(NSForegroundColorAttributeName, value: UIColor.whiteColor())
+    let cameraImage = camera.imageWithSize(CGSizeMake(40, 40))
+    
+    font.image = cameraImage
+    
+    
+    
         //キーボードにボタン追加[Done]
         // ボタンビュー作成
         var myKeyboard = UIView(frame: CGRectMake(0, 0, 320, 40))
@@ -397,5 +413,36 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
         self.view.endEditing(true )
     }
 
+    //@IBAction func addButton(sender: AnyObject){
+    
+    
+    @IBAction func tapImage(sender: UITapGestureRecognizer) {
+    
+        //self.pickImageFromCamera()
+        self.pickImageFromLibrary()
+    
+       }
+    
+    // ライブラリから写真を選択する
+    func pickImageFromLibrary() {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
+            let controller = UIImagePickerController()
+            controller.delegate = self
+            controller.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+            self.presentViewController(controller, animated: true, completion: nil)
+        }
+    }
+    
+    
+    // 写真を選択した時に呼ばれる
+    //カメラロールで写真を選んだ後
+    func imagePickerController(imagePicker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        
+        if info[UIImagePickerControllerOriginalImage] != nil {
+            let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+            print(image)
+        }
+        imagePicker.dismissViewControllerAnimated(true, completion: nil)
+    }
 
 }
