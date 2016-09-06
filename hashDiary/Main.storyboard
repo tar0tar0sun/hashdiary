@@ -190,8 +190,8 @@
                                     <action selector="saveBtn:" destination="dRz-hn-eED" eventType="touchUpInside" id="2iE-oN-GXE"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="2MB-Wn-TKs">
-                                <rect key="frame" x="40" y="398" width="241" height="114"/>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="2MB-Wn-TKs">
+                                <rect key="frame" x="30" y="382" width="261" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <connections>

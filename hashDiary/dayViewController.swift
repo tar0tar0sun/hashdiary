@@ -64,7 +64,7 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
         super.viewDidLoad()
         
     //フォントオーサムでアイコンづけ
-    let camera = FAKFontAwesome.trashIconWithSize(40)
+    let camera = FAKFontAwesome.cameraIconWithSize(40)
     // 下記でアイコンの色も変えられます
     // trash.addAttribute(NSForegroundColorAttributeName, value: UIColor.whiteColor())
     let cameraImage = camera.imageWithSize(CGSizeMake(40, 40))

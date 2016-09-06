@@ -19,6 +19,10 @@
 		4969C51D1D5DB15600782FE6 /* DeviseSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4969C51C1D5DB15600782FE6 /* DeviseSize.swift */; };
 		498FD5A51D65813F0012CE4B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 498FD5A41D65813F0012CE4B /* QuartzCore.framework */; };
 		498FD5A71D659C9F0012CE4B /* hashTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498FD5A61D659C9F0012CE4B /* hashTableViewCell.swift */; };
+		49A022FA1D7EA44A00F6C5DB /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 49A022F61D7EA44A00F6C5DB /* FontAwesome.otf */; };
+		49A022FB1D7EA44A00F6C5DB /* foundation-icons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49A022F71D7EA44A00F6C5DB /* foundation-icons.ttf */; };
+		49A022FC1D7EA44A00F6C5DB /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49A022F81D7EA44A00F6C5DB /* ionicons.ttf */; };
+		49A022FD1D7EA44A00F6C5DB /* zocial-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49A022F91D7EA44A00F6C5DB /* zocial-regular-webfont.ttf */; };
 		49B583781D76B3E700F7531C /* searchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B583771D76B3E700F7531C /* searchViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +67,10 @@
 		49A022F31D7E9E2B00F6C5DB /* hashDiary-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "hashDiary-Bridging-Header.h"; sourceTree = "<group>"; };
 		49A022F41D7E9E2B00F6C5DB /* hashDiaryTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "hashDiaryTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		49A022F51D7E9E2B00F6C5DB /* hashDiaryUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "hashDiaryUITests-Bridging-Header.h"; sourceTree = "<group>"; };
+		49A022F61D7EA44A00F6C5DB /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.otf; path = Pods/FontAwesomeKit/FontAwesomeKit/FontAwesome.otf; sourceTree = "<group>"; };
+		49A022F71D7EA44A00F6C5DB /* foundation-icons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "foundation-icons.ttf"; path = "Pods/FontAwesomeKit/FontAwesomeKit/foundation-icons.ttf"; sourceTree = "<group>"; };
+		49A022F81D7EA44A00F6C5DB /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ionicons.ttf; path = Pods/FontAwesomeKit/FontAwesomeKit/ionicons.ttf; sourceTree = "<group>"; };
+		49A022F91D7EA44A00F6C5DB /* zocial-regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "zocial-regular-webfont.ttf"; path = "Pods/FontAwesomeKit/FontAwesomeKit/zocial-regular-webfont.ttf"; sourceTree = "<group>"; };
 		49B583771D76B3E700F7531C /* searchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchViewController.swift; sourceTree = "<group>"; };
 		54F9D86F705C191DA5229644 /* Pods-hashDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hashDiary.release.xcconfig"; path = "Pods/Target Support Files/Pods-hashDiary/Pods-hashDiary.release.xcconfig"; sourceTree = "<group>"; };
 		6F551E6C491AEFAE8E9BC8A9 /* Pods-hashDiaryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hashDiaryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hashDiaryTests/Pods-hashDiaryTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -99,6 +107,10 @@
 		4969C4E21D5DA94C00782FE6 = {
 			isa = PBXGroup;
 			children = (
+				49A022F61D7EA44A00F6C5DB /* FontAwesome.otf */,
+				49A022F71D7EA44A00F6C5DB /* foundation-icons.ttf */,
+				49A022F81D7EA44A00F6C5DB /* ionicons.ttf */,
+				49A022F91D7EA44A00F6C5DB /* zocial-regular-webfont.ttf */,
 				49A022F31D7E9E2B00F6C5DB /* hashDiary-Bridging-Header.h */,
 				49A022F41D7E9E2B00F6C5DB /* hashDiaryTests-Bridging-Header.h */,
 				49A022F51D7E9E2B00F6C5DB /* hashDiaryUITests-Bridging-Header.h */,
@@ -293,6 +305,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49A022FA1D7EA44A00F6C5DB /* FontAwesome.otf in Resources */,
+				49A022FB1D7EA44A00F6C5DB /* foundation-icons.ttf in Resources */,
+				49A022FC1D7EA44A00F6C5DB /* ionicons.ttf in Resources */,
+				49A022FD1D7EA44A00F6C5DB /* zocial-regular-webfont.ttf in Resources */,
 				49567E931D61A5C900C1F6CC /* Main.storyboard in Resources */,
 				4969C4F91D5DA94D00782FE6 /* LaunchScreen.storyboard in Resources */,
 				4969C4F61D5DA94D00782FE6 /* Assets.xcassets in Resources */,
