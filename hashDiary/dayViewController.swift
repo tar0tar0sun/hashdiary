@@ -20,6 +20,8 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
     @IBOutlet weak var diaryTitle: UITextField!
     @IBOutlet weak var myCellView: UITableView!
     @IBOutlet weak var font: UIImageView!
+    @IBOutlet weak var font2: UIImageView!
+    @IBOutlet weak var Right: UIImageView!
    
     
     //今日の日付を表示
@@ -64,12 +66,32 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
         super.viewDidLoad()
         
     //フォントオーサムでアイコンづけ
-    let camera = FAKFontAwesome.cameraIconWithSize(40)
-    // 下記でアイコンの色も変えられます
-    // trash.addAttribute(NSForegroundColorAttributeName, value: UIColor.whiteColor())
-    let cameraImage = camera.imageWithSize(CGSizeMake(40, 40))
     
-    font.image = cameraImage
+    //カメラ
+        let camera = FAKFontAwesome.cameraIconWithSize(40)
+        // 下記でアイコンの色も変えられます
+        // trash.addAttribute(NSForegroundColorAttributeName, value: UIColor.whiteColor())
+        let cameraImage = camera.imageWithSize(CGSizeMake(40, 40))
+    
+        font.image = cameraImage
+    
+    //左マーク
+        let chevronCircleLeft = FAKFontAwesome.chevronCircleLeftIconWithSize(40)
+        // 下記でアイコンの色も変えられます
+        // trash.addAttribute(NSForegroundColorAttributeName, value: UIColor.whiteColor())
+        let chevronCircleLeftImage = chevronCircleLeft.imageWithSize(CGSizeMake(40, 40))
+    
+        font2.image = chevronCircleLeftImage
+    
+    //右マーク
+        let chevronCircleRight = FAKFontAwesome.chevronCircleRightIconWithSize(40)
+        // 下記でアイコンの色も変えられます
+        // trash.addAttribute(NSForegroundColorAttributeName, value: UIColor.whiteColor())
+        let chevronCircleRightImage = chevronCircleRight.imageWithSize(CGSizeMake(40, 40))
+    
+        Right.image = chevronCircleRightImage
+    
+    
     
     
     
@@ -150,15 +172,17 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
 
     
     //次画面
-    @IBAction func changeNextDate(sender: UIButton)
-    {
+    @IBAction func changeNextDate(sender: UIButton){
+    
+//    @IBAction func changeNextDate(sender: UITapGestureRecognizer) {
         changeDateDisplay(+1)
     }
     
    
     //次画面
-    @IBAction func changePreviousDate(sender: UIButton)
-    {
+    //@IBAction func changePreviousDate(sender: UITapGestureRecognizer) {
+    @IBAction func changePreviousDate(sender: UIButton){
+    
          changeDateDisplay(-1)
     }
     

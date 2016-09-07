@@ -114,22 +114,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ARy-aO-Yul">
-                                <rect key="frame" x="243" y="15" width="22" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="▶︎"/>
-                                <connections>
-                                    <action selector="changeNextDate:" destination="dRz-hn-eED" eventType="touchUpInside" id="lwQ-eG-cLa"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uSp-gc-V7q">
-                                <rect key="frame" x="46" y="15" width="23" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="◀︎"/>
-                                <connections>
-                                    <action selector="changePreviousDate:" destination="dRz-hn-eED" eventType="touchUpInside" id="LcP-f1-Yd1"/>
-                                </connections>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="51" sectionHeaderHeight="28" sectionFooterHeight="28" id="1wE-Bj-kw7">
                                 <rect key="frame" x="0.0" y="149" width="320" height="207"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -178,9 +162,13 @@
                                 <rect key="frame" x="92" y="8" width="119" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="o4V-DW-TS2" appends="YES" id="iIh-kE-q4P"/>
+                                </connections>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MHe-cC-qVx">
                                 <rect key="frame" x="267" y="15" width="48" height="30"/>
@@ -198,6 +186,22 @@
                                     <outletCollection property="gestureRecognizers" destination="kP2-pm-wGf" appends="YES" id="03e-ru-acQ"/>
                                 </connections>
                             </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="whl-ex-Szh">
+                                <rect key="frame" x="51" y="15" width="38" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="dMI-QX-GjB" appends="YES" id="GtH-NL-RKY"/>
+                                </connections>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="fyN-Z9-FLb">
+                                <rect key="frame" x="214" y="11" width="45" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="dMd-uf-Evt" appends="YES" id="xaQ-f2-Vig"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -207,9 +211,11 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="Right" destination="fyN-Z9-FLb" id="BQc-g6-7it"/>
                         <outlet property="celectedDateLabel" destination="m13-e1-ZgB" id="c80-9R-77S"/>
                         <outlet property="diaryTitle" destination="kDL-L7-nec" id="sFe-Fi-yPX"/>
                         <outlet property="font" destination="2MB-Wn-TKs" id="k9N-fL-bGJ"/>
+                        <outlet property="font2" destination="whl-ex-Szh" id="Gz3-d3-1xB"/>
                         <outlet property="myCellView" destination="1wE-Bj-kw7" id="ejS-N1-UQc"/>
                         <outlet property="myTableView" destination="1wE-Bj-kw7" id="Jlj-Q4-Wht"/>
                         <segue destination="bul-XB-Crm" kind="modal" id="DMd-fD-oVL"/>
@@ -224,9 +230,16 @@
                 <swipeGestureRecognizer direction="right" id="kod-l8-V3I"/>
                 <tapGestureRecognizer id="kP2-pm-wGf">
                     <connections>
-                        <action selector="tapImage:" destination="dRz-hn-eED" id="nZX-X3-jIm"/>
+                        <action selector="changeNextDate:" destination="dRz-hn-eED" id="dJZ-Ga-OAK"/>
                     </connections>
                 </tapGestureRecognizer>
+                <tapGestureRecognizer id="dMI-QX-GjB">
+                    <connections>
+                        <action selector="changePreviousDate:" destination="dRz-hn-eED" id="TWY-x7-Xgn"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="dMd-uf-Evt"/>
+                <pinchGestureRecognizer id="o4V-DW-TS2"/>
             </objects>
             <point key="canvasLocation" x="957" y="127"/>
         </scene>
