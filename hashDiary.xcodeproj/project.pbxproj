@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4914FFE91D61A1280054970E /* CalculateCalendarLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4914FFE81D61A1280054970E /* CalculateCalendarLogic.swift */; };
+		493396721D7FDAB8002B8A0E /* FontAwesomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 493396711D7FDAB8002B8A0E /* FontAwesomeKit.framework */; };
 		493D010D1D62DB1D007676CB /* dayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493D010C1D62DB1D007676CB /* dayViewController.swift */; };
 		49567E931D61A5C900C1F6CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49567E921D61A5C900C1F6CC /* Main.storyboard */; };
 		4969C4EF1D5DA94D00782FE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4969C4EE1D5DA94D00782FE6 /* AppDelegate.swift */; };
@@ -47,6 +48,7 @@
 		14FC971DFF3308609A2EB168 /* Pods-hashDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hashDiary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hashDiary/Pods-hashDiary.debug.xcconfig"; sourceTree = "<group>"; };
 		32AA6185CF2E36F5CF599952 /* Pods-hashDiaryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hashDiaryUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hashDiaryUITests/Pods-hashDiaryUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4914FFE81D61A1280054970E /* CalculateCalendarLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculateCalendarLogic.swift; sourceTree = "<group>"; };
+		493396711D7FDAB8002B8A0E /* FontAwesomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FontAwesomeKit.framework; path = "Pods/../build/Debug-iphoneos/FontAwesomeKit/FontAwesomeKit.framework"; sourceTree = "<group>"; };
 		493D010C1D62DB1D007676CB /* dayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dayViewController.swift; sourceTree = "<group>"; };
 		49567E921D61A5C900C1F6CC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4969C4EB1D5DA94C00782FE6 /* hashDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hashDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				493396721D7FDAB8002B8A0E /* FontAwesomeKit.framework in Frameworks */,
 				498FD5A51D65813F0012CE4B /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,6 +176,7 @@
 		674B5D790EABC695A14C7967 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				493396711D7FDAB8002B8A0E /* FontAwesomeKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -606,6 +610,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/FontAwesomeKit",
 				);
 				HEADER_SEARCH_PATHS = "Pods/**";
 				INFOPLIST_FILE = hashDiary/Info.plist;
@@ -629,6 +634,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/FontAwesomeKit",
 				);
 				HEADER_SEARCH_PATHS = "Pods/**";
 				INFOPLIST_FILE = hashDiary/Info.plist;
