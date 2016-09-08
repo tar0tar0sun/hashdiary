@@ -26,6 +26,7 @@
 		49A022FC1D7EA44A00F6C5DB /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49A022F81D7EA44A00F6C5DB /* ionicons.ttf */; };
 		49A022FD1D7EA44A00F6C5DB /* zocial-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49A022F91D7EA44A00F6C5DB /* zocial-regular-webfont.ttf */; };
 		49A04D121D8126C700CF4AE8 /* save.png in Resources */ = {isa = PBXBuildFile; fileRef = 49A04D111D8126C700CF4AE8 /* save.png */; };
+		49A04D141D81496900CF4AE8 /* hasen.png in Resources */ = {isa = PBXBuildFile; fileRef = 49A04D131D81496900CF4AE8 /* hasen.png */; };
 		49B583781D76B3E700F7531C /* searchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B583771D76B3E700F7531C /* searchViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,7 @@
 		49A022F81D7EA44A00F6C5DB /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ionicons.ttf; path = Pods/FontAwesomeKit/FontAwesomeKit/ionicons.ttf; sourceTree = "<group>"; };
 		49A022F91D7EA44A00F6C5DB /* zocial-regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "zocial-regular-webfont.ttf"; path = "Pods/FontAwesomeKit/FontAwesomeKit/zocial-regular-webfont.ttf"; sourceTree = "<group>"; };
 		49A04D111D8126C700CF4AE8 /* save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = save.png; sourceTree = "<group>"; };
+		49A04D131D81496900CF4AE8 /* hasen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hasen.png; sourceTree = "<group>"; };
 		49B583771D76B3E700F7531C /* searchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchViewController.swift; sourceTree = "<group>"; };
 		54F9D86F705C191DA5229644 /* Pods-hashDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hashDiary.release.xcconfig"; path = "Pods/Target Support Files/Pods-hashDiary/Pods-hashDiary.release.xcconfig"; sourceTree = "<group>"; };
 		6F551E6C491AEFAE8E9BC8A9 /* Pods-hashDiaryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hashDiaryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hashDiaryTests/Pods-hashDiaryTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			children = (
 				49A04D111D8126C700CF4AE8 /* save.png */,
 				493396731D7FEFA7002B8A0E /* hash.jpg */,
+				49A04D131D81496900CF4AE8 /* hasen.png */,
 				493D010C1D62DB1D007676CB /* dayViewController.swift */,
 				498FD5A61D659C9F0012CE4B /* hashTableViewCell.swift */,
 				49B583771D76B3E700F7531C /* searchViewController.swift */,
@@ -320,6 +323,7 @@
 				49A022FC1D7EA44A00F6C5DB /* ionicons.ttf in Resources */,
 				493396741D7FEFA7002B8A0E /* hash.jpg in Resources */,
 				49A022FD1D7EA44A00F6C5DB /* zocial-regular-webfont.ttf in Resources */,
+				49A04D141D81496900CF4AE8 /* hasen.png in Resources */,
 				49567E931D61A5C900C1F6CC /* Main.storyboard in Resources */,
 				4969C4F91D5DA94D00782FE6 /* LaunchScreen.storyboard in Resources */,
 				4969C4F61D5DA94D00782FE6 /* Assets.xcassets in Resources */,

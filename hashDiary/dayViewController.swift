@@ -4,7 +4,6 @@
 //
 //  Created by 浅田真太郎 on 2016/08/16.
 //  Copyright © 2016年 浅田真太郎. All rights reserved.
-//
 
 import UIKit
 
@@ -25,10 +24,9 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
     @IBOutlet weak var Right: UIImageView!
     @IBOutlet weak var camera: UIImageView!
     @IBOutlet weak var save: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
     
   
-   
-   
     
     //今日の日付を表示
     var selectedDate = NSDate()
@@ -74,7 +72,6 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
         super.viewDidLoad()
         
     //フォントオーサムでアイコンづけ
-    
     //カメラ
         let cameraFont = FAKFontAwesome.cameraIconWithSize(40)
         // 下記でアイコンの色も変えられます
@@ -128,51 +125,10 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
 //        //ユーザーデフォルトを全削除する→一端削除するとコメントアウトする
 //    //    var appDomain:String = NSBundle.mainBundle().bundleIdentifier!
 //    //   myDefault.removePersistentDomainForName(appDomain)
-//
-//        //タイトル
-//        if (myDefault.objectForKey("titleList") != nil)
-//        {
-//            //データ取り出し
-//            titleList = myDefault.objectForKey("titleList") as! [Dictionary]
-//        }
-//        print(titleList)
-//        
-//        //内容
-//        if (myDefault.objectForKey("contentsHash") != nil)
-//        {
-//            //データ取り出し
-//            contentsHash = myDefault.objectForKey("contentsHash") as! [Dictionary]
-//        }
-//        print(contentsHash)
-//    
-//        //コンテンツハッシュtmpも取り出し
-//    if (myDefault.objectForKey("contentsHashTmp") != nil)
-//    {
-//        //データ取り出し
-//        contentsHashTmp = myDefault.objectForKey("contentsHashTmp") as![Dictionary<String,String>]
-//    }
-//    
-
         
         // NavigationBarを隠す処理
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         
-//        //日を表示、代入祭り
-//        var df = NSDateFormatter()
-//        df.dateFormat = "yyyy/MM/dd"
-//        var datestr = df.stringFromDate(selectedDate)
-//        
-//        //デバックエリアに表示
-//        print("\(datestr)の日記です")
-//        
-//        celectedDateLabel.text = "\(datestr)"
-//        
-//        
-//        //配列の個数だけ繰り返し表示(配列から辞書データを取り出す):タイトル
-//        for dat in titleList
-//        {}
-//    
-   
     //カレンダー画面から日画面に行く時のセット
     changeDateDisplay(0)
     
@@ -208,6 +164,15 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
         df.dateFormat = "yyyy/MM/dd"
         
         var datestr = df.stringFromDate(selectedDate)
+       
+        let view = UIScrollView(frame: self.view.bounds)
+        view.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+        view.contentSize = .zero
+        
+        //ラベルのフォントの種類
+        titleLabel.font = UIFont(name: "chalkboardSE-Bold", size: 45)
+        celectedDateLabel.font = UIFont(name: "chalkboardSE-Bold", size: 30)
+        
         
         //TODO:画像データの取得、表示
         
@@ -280,19 +245,7 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
         }
         
         
-        //タイトルを表示
-        //まっさらにして見つけたら今のやつを表示
-      //  diaryList.removeAll()
-        
-        //var myDefault = NSUserDefaults.standardUserDefaults()
-//        
-//        if (myDefault.objectForKey("diaryList") != nil)
-//        {
-//            //ユーザーデフォルトを削除する
-//            //キー指定
-//            myDefault.removeObjectForKey("diaryList")
-//        }
-        
+             
         //タイトルのテキストを一回クリアして表示
         diaryTitle.text = ""
         
