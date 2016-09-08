@@ -9,7 +9,9 @@
 import UIKit
 
 import UIKit
-import Photos // ★追加
+import Photos
+import MobileCoreServices
+
 
 
 class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDelegate,UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate
@@ -19,9 +21,13 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
     @IBOutlet weak var myTableView: UITableView!
     @IBOutlet weak var diaryTitle: UITextField!
     @IBOutlet weak var myCellView: UITableView!
-    @IBOutlet weak var font: UIImageView!
-    @IBOutlet weak var font2: UIImageView!
+    @IBOutlet weak var left: UIImageView!
     @IBOutlet weak var Right: UIImageView!
+    @IBOutlet weak var camera: UIImageView!
+    @IBOutlet weak var save: UIImageView!
+    
+  
+   
    
     
     //今日の日付を表示
@@ -33,6 +39,8 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
     var contentsHash = [["contents":"日記内容","date":"2016/05/13"]]
     //コンテンツテンプ名前付け
     var contentsHashTmp = [["contents":"日記内容","date":"2016/05/13"]]
+    //写真
+    var picture = [["imageURL":"","date":"2016/09/7"]]
     
     
     
@@ -68,12 +76,12 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
     //フォントオーサムでアイコンづけ
     
     //カメラ
-        let camera = FAKFontAwesome.cameraIconWithSize(40)
+        let cameraFont = FAKFontAwesome.cameraIconWithSize(40)
         // 下記でアイコンの色も変えられます
         // trash.addAttribute(NSForegroundColorAttributeName, value: UIColor.whiteColor())
-        let cameraImage = camera.imageWithSize(CGSizeMake(40, 40))
+        let cameraImage = cameraFont.imageWithSize(CGSizeMake(40, 40))
     
-        font.image = cameraImage
+        camera.image = cameraImage
     
     //左マーク
         let chevronCircleLeft = FAKFontAwesome.chevronCircleLeftIconWithSize(40)
@@ -81,7 +89,7 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
         // trash.addAttribute(NSForegroundColorAttributeName, value: UIColor.whiteColor())
         let chevronCircleLeftImage = chevronCircleLeft.imageWithSize(CGSizeMake(40, 40))
     
-        font2.image = chevronCircleLeftImage
+        left.image = chevronCircleLeftImage
     
     //右マーク
         let chevronCircleRight = FAKFontAwesome.chevronCircleRightIconWithSize(40)
@@ -113,9 +121,9 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
         diaryTitle.inputAccessoryView = myKeyboard
         diaryTitle.delegate = self
     
-        
-        
-//        //ユーザーデフォルトから保存した配列を取り出す
+    
+    
+        //ユーザーデフォルトから保存した配列を取り出す
 //        var myDefault = NSUserDefaults.standardUserDefaults()
 //        //ユーザーデフォルトを全削除する→一端削除するとコメントアウトする
 //    //    var appDomain:String = NSBundle.mainBundle().bundleIdentifier!
@@ -172,16 +180,15 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
 
     
     //次画面
-    @IBAction func changeNextDate(sender: UIButton){
-    
-//    @IBAction func changeNextDate(sender: UITapGestureRecognizer) {
+    @IBAction func changeNextDate(sender: UITapGestureRecognizer) {
+        //    @IBAction func changeNextDate(sender: UITapGestureRecognizer) {
         changeDateDisplay(+1)
     }
     
    
     //次画面
     //@IBAction func changePreviousDate(sender: UITapGestureRecognizer) {
-    @IBAction func changePreviousDate(sender: UIButton){
+    @IBAction func changePreviousDate(sender: UITapGestureRecognizer){
     
          changeDateDisplay(-1)
     }
@@ -202,13 +209,38 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
         
         var datestr = df.stringFromDate(selectedDate)
         
+        //TODO:画像データの取得、表示
+        
+        //ユーザーデフォルトから保存した配列を取り出す
+        var myDefault = NSUserDefaults.standardUserDefaults()
+        //画像
+        if (myDefault.objectForKey("picture") != nil)
+        {
+            //データ取り出し
+            picture = myDefault.objectForKey("picture") as! [Dictionary]
+        }
+        print(picture)
+        
+        
+        // データを取り出す
+        var strURL = myDefault.stringForKey("selectedPhotoURL")
+        
+        if strURL != nil{
+            
+            var url = NSURL(string: strURL as! String!)
+            let fetchResult: PHFetchResult = PHAsset.fetchAssetsWithALAssetURLs([url!], options: nil)
+            let asset: PHAsset = fetchResult.firstObject as! PHAsset
+            let manager: PHImageManager = PHImageManager()
+            manager.requestImageForAsset(asset,targetSize: CGSizeMake(5, 500),contentMode: .AspectFill,options: nil) { (image, info) -> Void in
+                self.camera.image = image
+            }
+        }
+
         
         
         //内容を表示
         //まっさらにして(tmpだけ)見つけたら今のやつを表示
         contentsHashTmp.removeAll()
-        
-        var myDefault = NSUserDefaults.standardUserDefaults()
         
         if (myDefault.objectForKey("contentsHashTmp") != nil)
         {
@@ -269,8 +301,6 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
         
         //diaryListの中身をルーブで取り出し、表示日付と同じハッシュタグをdiaryList(メンバ変数)に追加
         //for 文
-        
-        
         if (myDefault.objectForKey("titleList") != nil)
         {
             //データ取り出し
@@ -338,8 +368,9 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
     
     
     //保存ボタン
-    @IBAction func saveBtn(sender: UIButton)
-    {
+  
+    @IBAction func saveTap(sender: UITapGestureRecognizer) {
+    
         // -----  title の設定 ------------------------------------------------
         var i = 0
         for dat in titleList
@@ -412,12 +443,19 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
 
          // -----  contentsHash の設定 End ------------------------------------------------
 
+        //画像の保存
+       // picture.append(["imageURL":,"date":celectedDateLabel.text!])
+        //for文で表示
+        
+        
+        
         
         //ユーザーデフォルトに保存する作業
         //データを書き込んで
         myDefault.setObject(titleList, forKey:"titleList")
         myDefault.setObject(
             contentsHash, forKey:"contentsHash")
+         myDefault.setObject(picture, forKey:"picture")
         //即反映される
         myDefault.synchronize()
         

@@ -100,14 +100,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="＃" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tNp-nm-vtK">
-                                <rect key="frame" x="92" y="72" width="39" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="highlightedColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="title" textAlignment="natural" minimumFontSize="17" id="kDL-L7-nec">
                                 <rect key="frame" x="139" y="69" width="150" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -126,15 +118,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="＃" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LgU-N2-uxp">
-                                                    <rect key="frame" x="8" y="8" width="49" height="25"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="tintColor" red="0.4407969243" green="0.68701128079999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="39"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="highlightedColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="one Sentence" textAlignment="natural" minimumFontSize="17" id="cTO-Pz-yPc">
                                                     <rect key="frame" x="79" y="10" width="213" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -145,11 +128,16 @@
                                                         <outletCollection property="gestureRecognizers" destination="kod-l8-V3I" appends="YES" id="PYF-Y7-Xic"/>
                                                     </connections>
                                                 </textField>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hash.jpg" id="jb2-Iw-3bO">
+                                                    <rect key="frame" x="14" y="6" width="48" height="36"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <gestureRecognizers/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="HashLabel" destination="LgU-N2-uxp" id="Mh6-IC-OqR"/>
                                             <outlet property="contentText" destination="cTO-Pz-yPc" id="7TI-Mv-BL2"/>
+                                            <outlet property="hashtag" destination="jb2-Iw-3bO" id="9VK-Dm-2Jv"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -166,24 +154,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="o4V-DW-TS2" appends="YES" id="iIh-kE-q4P"/>
-                                </connections>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MHe-cC-qVx">
-                                <rect key="frame" x="267" y="15" width="48" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="保存"/>
-                                <connections>
-                                    <action selector="saveBtn:" destination="dRz-hn-eED" eventType="touchUpInside" id="2iE-oN-GXE"/>
-                                </connections>
-                            </button>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="2MB-Wn-TKs">
                                 <rect key="frame" x="30" y="382" width="261" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="kP2-pm-wGf" appends="YES" id="03e-ru-acQ"/>
+                                    <outletCollection property="gestureRecognizers" destination="2rb-Le-YJm" appends="YES" id="Hct-pK-hlo"/>
                                 </connections>
                             </imageView>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="whl-ex-Szh">
@@ -191,15 +168,27 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="dMI-QX-GjB" appends="YES" id="GtH-NL-RKY"/>
+                                    <outletCollection property="gestureRecognizers" destination="KhG-q7-9xq" appends="YES" id="HIg-TO-eJw"/>
                                 </connections>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="fyN-Z9-FLb">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="fyN-Z9-FLb">
                                 <rect key="frame" x="214" y="11" width="45" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="dMd-uf-Evt" appends="YES" id="xaQ-f2-Vig"/>
+                                    <outletCollection property="gestureRecognizers" destination="ajB-tR-aII" appends="YES" id="i0Y-96-afA"/>
+                                </connections>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hash.jpg" id="v5k-FO-EhW">
+                                <rect key="frame" x="92" y="64" width="39" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="save.png" id="ni1-3z-6XB">
+                                <rect key="frame" x="273" y="20" width="40" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Pf7-PZ-OcN" appends="YES" id="X3I-G7-d42"/>
                                 </connections>
                             </imageView>
                         </subviews>
@@ -211,13 +200,14 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="Right" destination="fyN-Z9-FLb" id="BQc-g6-7it"/>
+                        <outlet property="Right" destination="fyN-Z9-FLb" id="AzZ-14-mcC"/>
+                        <outlet property="camera" destination="2MB-Wn-TKs" id="Rou-md-dUw"/>
                         <outlet property="celectedDateLabel" destination="m13-e1-ZgB" id="c80-9R-77S"/>
                         <outlet property="diaryTitle" destination="kDL-L7-nec" id="sFe-Fi-yPX"/>
-                        <outlet property="font" destination="2MB-Wn-TKs" id="k9N-fL-bGJ"/>
-                        <outlet property="font2" destination="whl-ex-Szh" id="Gz3-d3-1xB"/>
+                        <outlet property="left" destination="whl-ex-Szh" id="QJ9-UG-TY9"/>
                         <outlet property="myCellView" destination="1wE-Bj-kw7" id="ejS-N1-UQc"/>
                         <outlet property="myTableView" destination="1wE-Bj-kw7" id="Jlj-Q4-Wht"/>
+                        <outlet property="save" destination="ni1-3z-6XB" id="l8s-pG-7hQ"/>
                         <segue destination="bul-XB-Crm" kind="modal" id="DMd-fD-oVL"/>
                     </connections>
                 </viewController>
@@ -228,18 +218,27 @@
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="right" id="kod-l8-V3I"/>
-                <tapGestureRecognizer id="kP2-pm-wGf">
+                <tapGestureRecognizer id="KhG-q7-9xq" userLabel="left">
                     <connections>
-                        <action selector="changeNextDate:" destination="dRz-hn-eED" id="dJZ-Ga-OAK"/>
+                        <action selector="changePreviousDate:" destination="dRz-hn-eED" id="ziP-WR-dvl"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="dMI-QX-GjB">
+                <tapGestureRecognizer id="2rb-Le-YJm" userLabel="tapCamera">
                     <connections>
-                        <action selector="changePreviousDate:" destination="dRz-hn-eED" id="TWY-x7-Xgn"/>
+                        <action selector="tapImage:" destination="dRz-hn-eED" id="NLH-Cz-N9q"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="dMd-uf-Evt"/>
-                <pinchGestureRecognizer id="o4V-DW-TS2"/>
+                <tapGestureRecognizer id="ajB-tR-aII" userLabel="right">
+                    <connections>
+                        <action selector="changeNextDate:" destination="dRz-hn-eED" id="tcd-hC-zeU"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Pf7-PZ-OcN" userLabel="save">
+                    <connections>
+                        <action selector="saveTap:" destination="dRz-hn-eED" id="Zkh-bF-VtN"/>
+                        <outlet property="delegate" destination="ni1-3z-6XB" id="dBf-xO-xFa"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="957" y="127"/>
         </scene>
@@ -318,4 +317,8 @@
             <point key="canvasLocation" x="82" y="127"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="hash.jpg" width="350" height="355"/>
+        <image name="save.png" width="92" height="78"/>
+    </resources>
 </document>

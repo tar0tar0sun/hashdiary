@@ -11,15 +11,15 @@ import UIKit
 class hashTableViewCell: UITableViewCell,UITextFieldDelegate
 {
     
-    @IBOutlet weak var HashLabel: UILabel!
+    //@IBOutlet weak var HashLabel: UILabel!
     @IBOutlet weak var contentText: UITextField!
+    @IBOutlet weak var hashtag: UIImageView!
     
     
     override func awakeFromNib()
     {
         super.awakeFromNib()
         // Initialization code
-        
         
         //キーボードにボタン追加[hash]
         // ボタンビュー作成
