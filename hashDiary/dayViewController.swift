@@ -25,6 +25,8 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
     @IBOutlet weak var camera: UIImageView!
     @IBOutlet weak var save: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var TwitterView: UIImageView!
+    @IBOutlet weak var FacebookView: UIImageView!
     
   
     
@@ -96,8 +98,22 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
     
         Right.image = chevronCircleRightImage
     
+    //facebook
+    let facebook = FAKFontAwesome.cameraIconWithSize(40)
+    // 下記でアイコンの色も変えられます
+    // trash.addAttribute(NSForegroundColorAttributeName, value: UIColor.whiteColor())
+    let facebookImage = facebook.imageWithSize(CGSizeMake(40, 40))
     
+        FacebookView.image = facebookImage
     
+    //twitter
+    let twitter = FAKFontAwesome.cameraIconWithSize(40)
+    // 下記でアイコンの色も変えられます
+    // trash.addAttribute(NSForegroundColorAttributeName, value: UIColor.whiteColor())
+    let twitterImage = twitter.imageWithSize(CGSizeMake(40, 40))
+    
+        TwitterView.image = twitterImage
+
     
     
         //キーボードにボタン追加[Done]
@@ -324,6 +340,16 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
   
     @IBAction func saveTap(sender: UITapGestureRecognizer) {
     
+        //アラート作成
+        var alertController = UIAlertController(
+            title: "save complete",preferredStyle: .Alert
+        )
+        
+        //okボタン
+        alertController.addAction(UIAlertAction(title:"ok",style: .Default,handler: { action in self.myOK() } ))
+        //アラート表示
+        presentationController(alertController, animated: true,completion: nil)
+        
         // -----  title の設定 ------------------------------------------------
         var i = 0
         for dat in titleList

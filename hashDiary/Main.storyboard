@@ -90,8 +90,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79G-JK-VQL">
-                                <rect key="frame" x="23" y="78" width="110" height="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79G-JK-VQL">
+                                <rect key="frame" x="23" y="78" width="110" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <color key="textColor" red="0.20392156859999999" green="0.4941176471" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -177,10 +177,24 @@
                                 </connections>
                             </imageView>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2MB-Wn-TKs">
-                                <rect key="frame" x="84" y="398" width="150" height="150"/>
+                                <rect key="frame" x="14" y="393" width="165" height="165"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="2rb-Le-YJm" appends="YES" id="Hct-pK-hlo"/>
+                                </connections>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OuX-1J-bL4" userLabel="facebook share">
+                                <rect key="frame" x="224" y="491" width="53" height="53"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Vmn-rx-mGT" appends="YES" id="tMo-eU-XxX"/>
+                                </connections>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CXN-uV-WGC" userLabel="Twitter share">
+                                <rect key="frame" x="224" y="413" width="53" height="53"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="55t-1E-lYq" appends="YES" id="Y2r-cx-U1Z"/>
                                 </connections>
                             </imageView>
                         </subviews>
@@ -192,7 +206,9 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="Facebook" destination="OuX-1J-bL4" id="spj-UJ-RKW"/>
                         <outlet property="Right" destination="fyN-Z9-FLb" id="AzZ-14-mcC"/>
+                        <outlet property="Twitter" destination="CXN-uV-WGC" id="S0j-KG-f3e"/>
                         <outlet property="camera" destination="2MB-Wn-TKs" id="Rou-md-dUw"/>
                         <outlet property="celectedDateLabel" destination="m13-e1-ZgB" id="c80-9R-77S"/>
                         <outlet property="diaryTitle" destination="kDL-L7-nec" id="sFe-Fi-yPX"/>
@@ -232,8 +248,10 @@
                         <outlet property="delegate" destination="ni1-3z-6XB" id="dBf-xO-xFa"/>
                     </connections>
                 </tapGestureRecognizer>
+                <tapGestureRecognizer id="55t-1E-lYq"/>
+                <tapGestureRecognizer id="Vmn-rx-mGT"/>
             </objects>
-            <point key="canvasLocation" x="1794.375" y="134.15492957746477"/>
+            <point key="canvasLocation" x="1794" y="134"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="7K4-aq-9JB">
