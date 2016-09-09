@@ -269,7 +269,7 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
             if (diaryListEach["date"] == datestr){
                 
                 
-               diaryTitle.text = diaryListEach["title"]
+               diaryTitle.text = diaryListEach["Title"]
                 
          
             }

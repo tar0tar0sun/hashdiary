@@ -59,7 +59,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-    
+        
+        //日付のフォント変え
+        calendarBar.font = UIFont(name: "chalkboardSE-Bold", size: 50)
+       
         //現在起動中のデバイスを取得（スクリーンの幅・高さ）
         let screenWidth  = DeviseSize.screenWidth()
         let screenHeight = DeviseSize.screenHeight()
@@ -206,18 +209,7 @@ class ViewController: UIViewController {
                 CGFloat(calendarLabelWidth),
                 CGFloat(calendarLabelHeight)
             )
-           
-            //アプリ画面背景色：青
-            //backGroundcolor = UIColor.blueColor()
-            
-            if month % 2 == 0{
-                backGroundcolor = UIColor.blueColor()
-            }
-            else
-            {
-                backGroundcolor = UIColor.blackColor()
-            }
-            self.view.backgroundColor = backGroundcolor
+        
 
             
             //日曜日の場合は赤色を指定
@@ -344,14 +336,16 @@ class ViewController: UIViewController {
     //タイトル表記を設定する関数
     func setupCalendarTitleLabel() {
         calendarBar.text = String("\(year).\(month)")
-        
+        //UIColor(red: 0, green: 0, blue: 1.0, alpha: 1.0)
+        //アプリ画面背景色：青        
         if month % 2 == 0{
-            backGroundcolor = UIColor.blueColor()
+            backGroundcolor = UIColor(red: CGFloat(0.500), green: CGFloat(0.700), blue: CGFloat(1.990), alpha: CGFloat(9.000))
         }
         else
         {
-            backGroundcolor = UIColor.blackColor()
+            backGroundcolor = UIColor(red: CGFloat(0.400), green: CGFloat(0.800), blue: CGFloat(1.990), alpha: CGFloat(9.000))
         }
+        
         self.view.backgroundColor = backGroundcolor
         
 
@@ -501,12 +495,12 @@ class ViewController: UIViewController {
     }
     
     //左スワイプで前月を表示
-    @IBAction func swipePrevCalendar(sender: UISwipeGestureRecognizer) {
+    @IBAction func swipeNextCalendar(sender: UISwipeGestureRecognizer) {
         prevCalendarSettings()
     }
     
     //右スワイプで次月を表示
-    @IBAction func swipeNextCalendar(sender: UISwipeGestureRecognizer) {
+    @IBAction func swipePrevCalendar(sender: UISwipeGestureRecognizer) {
         nextCalendarSettings()
     }
     
