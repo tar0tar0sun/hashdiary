@@ -206,9 +206,9 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="Facebook" destination="OuX-1J-bL4" id="spj-UJ-RKW"/>
+                        <outlet property="FacebookView" destination="OuX-1J-bL4" id="rLx-jm-IcQ"/>
                         <outlet property="Right" destination="fyN-Z9-FLb" id="AzZ-14-mcC"/>
-                        <outlet property="Twitter" destination="CXN-uV-WGC" id="S0j-KG-f3e"/>
+                        <outlet property="TwitterView" destination="CXN-uV-WGC" id="JJZ-Uu-bhu"/>
                         <outlet property="camera" destination="2MB-Wn-TKs" id="Rou-md-dUw"/>
                         <outlet property="celectedDateLabel" destination="m13-e1-ZgB" id="c80-9R-77S"/>
                         <outlet property="diaryTitle" destination="kDL-L7-nec" id="sFe-Fi-yPX"/>
