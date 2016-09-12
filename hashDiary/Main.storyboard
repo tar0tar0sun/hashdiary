@@ -248,8 +248,16 @@
                         <outlet property="delegate" destination="ni1-3z-6XB" id="dBf-xO-xFa"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="55t-1E-lYq"/>
-                <tapGestureRecognizer id="Vmn-rx-mGT"/>
+                <tapGestureRecognizer id="55t-1E-lYq" userLabel="twitterRecognizer">
+                    <connections>
+                        <action selector="tapTwitter:" destination="dRz-hn-eED" id="Erb-A8-gwc"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Vmn-rx-mGT" userLabel="facebookRecognizer">
+                    <connections>
+                        <action selector="tapFacebook:" destination="dRz-hn-eED" id="P7x-4o-bYe"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1794" y="134"/>
         </scene>

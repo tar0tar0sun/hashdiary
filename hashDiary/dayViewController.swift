@@ -10,6 +10,7 @@ import UIKit
 import UIKit
 import Photos
 import MobileCoreServices
+import Social
 
 
 
@@ -32,6 +33,8 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
     
     //今日の日付を表示
     var selectedDate = NSDate()
+    //選択された写真のURL
+    var selectedImageUrl = ""
     
     //日記のタイトル
     var titleList = [["title":"タイトル1","date":"2016/05/13"],["title":"タイトル2","date":"2016/05/14"],["title":"タイトル3","date":"2016/05/15"]]
@@ -75,10 +78,10 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
         
     //フォントオーサムでアイコンづけ
     //カメラ
-        let cameraFont = FAKFontAwesome.cameraIconWithSize(40)
+        let cameraFont = FAKFontAwesome.cameraIconWithSize(165)
         // 下記でアイコンの色も変えられます
         // trash.addAttribute(NSForegroundColorAttributeName, value: UIColor.whiteColor())
-        let cameraImage = cameraFont.imageWithSize(CGSizeMake(40, 40))
+        let cameraImage = cameraFont.imageWithSize(CGSizeMake(165, 165))
     
         camera.image = cameraImage
     
@@ -101,7 +104,7 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
     //facebook
     let facebook = FAKFontAwesome.facebookIconWithSize(40)
     // 下記でアイコンの色も変えられます
-    // trash.addAttribute(NSForegroundColorAttributeName, value: UIColor.whiteColor())
+     //trash.addAttribute(NSForegroundColorAttributeName, value: UIColor.whiteColor())
     let facebookImage = facebook.imageWithSize(CGSizeMake(40, 40))
     
         FacebookView.image = facebookImage
@@ -109,7 +112,7 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
     //twitter
     let twitter = FAKFontAwesome.twitterIconWithSize(40)
     // 下記でアイコンの色も変えられます
-    // trash.addAttribute(NSForegroundColorAttributeName, value: UIColor.whiteColor())
+     //trash.addAttribute(NSForegroundColorAttributeName, value: UIColor.whiteColor())
     let twitterImage = twitter.imageWithSize(CGSizeMake(40, 40))
     
         TwitterView.image = twitterImage
@@ -137,11 +140,11 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
     
     
         //ユーザーデフォルトから保存した配列を取り出す
-//        var myDefault = NSUserDefaults.standardUserDefaults()
+   // var myDefault = NSUserDefaults.standardUserDefaults()
 //        //ユーザーデフォルトを全削除する→一端削除するとコメントアウトする
-//    //    var appDomain:String = NSBundle.mainBundle().bundleIdentifier!
-//    //   myDefault.removePersistentDomainForName(appDomain)
-        
+ // var appDomain:String = NSBundle.mainBundle().bundleIdentifier!
+  //  myDefault.removePersistentDomainForName(appDomain)
+    
         // NavigationBarを隠す処理
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         
@@ -204,9 +207,35 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
         
         
         // データを取り出す
-        var strURL = myDefault.stringForKey("selectedPhotoURL")
+        selectedImageUrl = ""
         
-        if strURL != nil{
+        for pictureEach in picture {
+            print("\(pictureEach)")
+            
+            //データの日付と選んだ日付が同じ場合、
+            if (pictureEach["date"] == datestr){
+                
+                
+                selectedImageUrl = pictureEach["imageURL"]!
+                
+                
+            }
+            
+        }
+
+        
+        var strURL = selectedImageUrl
+        if strURL == ""{
+            //フォントオーサムでアイコンづけ
+            //カメラ
+            let cameraFont = FAKFontAwesome.cameraIconWithSize(165)
+            // 下記でアイコンの色も変えられます
+            // trash.addAttribute(NSForegroundColorAttributeName, value: UIColor.whiteColor())
+            let cameraImage = cameraFont.imageWithSize(CGSizeMake(165, 165))
+            
+            camera.image = cameraImage
+        
+        }else{
             
             var url = NSURL(string: strURL as! String!)
             let fetchResult: PHFetchResult = PHAsset.fetchAssetsWithALAssetURLs([url!], options: nil)
@@ -267,7 +296,6 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
         
         //タイトル
         
-        
         //diaryListの中身をルーブで取り出し、表示日付と同じハッシュタグをdiaryList(メンバ変数)に追加
         //for 文
         if (myDefault.objectForKey("titleList") != nil)
@@ -285,7 +313,7 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
             if (diaryListEach["date"] == datestr){
                 
                 
-               diaryTitle.text = diaryListEach["Title"]
+               diaryTitle.text = diaryListEach["title"]
                 
          
             }
@@ -340,16 +368,21 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
   
     @IBAction func saveTap(sender: UITapGestureRecognizer) {
     
-//        //アラート作成
-//        var alertController = UIAlertController(
-//            nibName: "save complete",bundle: .Alert
-//        )
-//        
-//        //okボタン
-//        alertController.addAction(UIAlertAction(title:"ok",style: .Default,handler: { action in self.myOK() } ))
-//        //アラート表示
-//        presentationController(alertController, animated: true,completion: nil)
-//        
+        //アラート作成
+        var alertController = UIAlertController(
+            title: "info",
+            message: "save",
+            preferredStyle: .Alert)
+        
+        //okボタン
+        alertController.addAction(UIAlertAction(
+            title:"ok",
+            style: .Default,
+            handler: nil ))
+        
+        //アラート表示
+        presentViewController(alertController, animated: true,completion: nil)
+        
         // -----  title の設定 ------------------------------------------------
         var i = 0
         for dat in titleList
@@ -425,6 +458,34 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
         //画像の保存
        // picture.append(["imageURL":,"date":celectedDateLabel.text!])
         //for文で表示
+        // -----  画像の設定 ------------------------------------------------
+         i = 0
+        for dat in picture
+        {
+            //stringは文字
+            var savedDate = dat["date"] as! String!
+            var savedURL = dat["imageURL"] as! String!
+            
+            
+            //日を表示、代入祭り
+            var df = NSDateFormatter()
+            df.dateFormat = "yyyy/MM/dd"
+            var datestr = df.stringFromDate(selectedDate)
+            
+            //古いデータを削除
+            if (savedDate == datestr){picture.removeAtIndex(i)}
+            
+            i++
+            
+            print("date[\(savedDate)] url[\(savedURL)]")
+        }
+        
+        
+        //ピクチャの追加
+        picture.append(["imageURL":selectedImageUrl,"date":celectedDateLabel.text!])
+        
+        
+        // -----  画像 の設定 End ------------------------------------------------
         
         
         
@@ -448,6 +509,30 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
         // Dispose of any resources that can be recreated.
     }
     
+    //シェア機能
+    //ツイッター
+    //内容を表示機能を作る
+    
+    @IBAction func tapTwitter(sender: UITapGestureRecognizer) {
+    var twitterVC = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+    twitterVC.setInitialText("今日の出来事‼︎")
+    twitterVC.addImage(UIImage(named: "sky.jp"))
+    
+    presentViewController(twitterVC, animated: true, completion: nil)
+    }
+    //フェイスブック
+    
+    @IBAction func tapFacebook(sender: UITapGestureRecognizer) {
+    var facebookVC = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+    facebookVC.setInitialText("【今日の出来事】")
+    facebookVC.addImage(UIImage(named: "sky.jp"))
+    
+    presentViewController(facebookVC, animated: true, completion: nil)
+
+    
+}
+
+
     //タイトルのDONEボタンが押された時
     func onMyButton ()
     {
@@ -484,6 +569,13 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
             print(image)
             
            camera.image = image
+            
+            //アセッツURLの取得(画像の表示)
+            let assetURL:AnyObject = info
+            ["UIImagePickerControllerReferenceURL"]
+            
+            selectedImageUrl = assetURL["UIImagePickerControllerReferenceURL"]!!.description as! String
+            
         }
         imagePicker.dismissViewControllerAnimated(true, completion: nil)
     }
