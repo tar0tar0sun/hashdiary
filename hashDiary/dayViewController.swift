@@ -370,7 +370,7 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
     
         //アラート作成
         var alertController = UIAlertController(
-            title: "info",
+            title: "INFO",
             message: "save",
             preferredStyle: .Alert)
         
@@ -456,8 +456,6 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
          // -----  contentsHash の設定 End ------------------------------------------------
 
         //画像の保存
-       // picture.append(["imageURL":,"date":celectedDateLabel.text!])
-        //for文で表示
         // -----  画像の設定 ------------------------------------------------
          i = 0
         for dat in picture
@@ -509,27 +507,57 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
         // Dispose of any resources that can be recreated.
     }
     
-    //シェア機能
-    //ツイッター
-    //内容を表示機能を作る
     
     @IBAction func tapTwitter(sender: UITapGestureRecognizer) {
     var twitterVC = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
-    twitterVC.setInitialText("今日の出来事‼︎")
+        
+        // シェアしたい文字列を格納する変数
+        var strShare = ""
+        
+        //タイトル
+        strShare = "Title:\(diaryTitle.text!)\n"
+
+        
+        //内容
+        for contentsHashEach in contentsHashTmp {
+        
+        
+            strShare = strShare + "#\(contentsHashEach["contents"]!)\n"
+        
+        }
+        
+                
+            twitterVC.setInitialText(strShare)
+            
     twitterVC.addImage(UIImage(named: "sky.jp"))
     
     presentViewController(twitterVC, animated: true, completion: nil)
     }
-    //フェイスブック
     
+    //フェイスブック
     @IBAction func tapFacebook(sender: UITapGestureRecognizer) {
     var facebookVC = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
-    facebookVC.setInitialText("【今日の出来事】")
+        // シェアしたい文字列を格納する変数
+        var strShare = ""
+        
+        //タイトル
+        strShare = "Title:\(diaryTitle.text!)\n"
+        
+        
+        //内容
+        for contentsHashEach in contentsHashTmp {
+            
+            
+            strShare = strShare + "#\(contentsHashEach["contents"]!)\n"
+            
+        }
+        
+        facebookVC.setInitialText(strShare)
+        
     facebookVC.addImage(UIImage(named: "sky.jp"))
     
     presentViewController(facebookVC, animated: true, completion: nil)
 
-    
 }
 
 
@@ -581,3 +609,4 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
     }
 
 }
+
