@@ -27,7 +27,7 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
     @IBOutlet weak var save: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var TwitterView: UIImageView!
-    @IBOutlet weak var FacebookView: UIImageView!
+    //@IBOutlet weak var FacebookView: UIImageView!
     
   
     
@@ -101,21 +101,21 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
     
         Right.image = chevronCircleRightImage
     
-    //facebook
-    let facebook = FAKFontAwesome.facebookIconWithSize(40)
-    // 下記でアイコンの色も変えられます
-     //trash.addAttribute(NSForegroundColorAttributeName, value: UIColor.whiteColor())
-    let facebookImage = facebook.imageWithSize(CGSizeMake(40, 40))
-    
-        FacebookView.image = facebookImage
+//    //facebook
+//    let facebook = FAKFontAwesome.facebookIconWithSize(40)
+//    // 下記でアイコンの色も変えられます
+//     facebook.addAttribute(NSForegroundColorAttributeName, value: UIColor.blueColor())
+//    let facebookImage = facebook.imageWithSize(CGSizeMake(40, 40))
+//    
+//        FacebookView.image = facebookImage
     
     //twitter
-    let twitter = FAKFontAwesome.twitterIconWithSize(40)
+    let twittersquare = FAKFontAwesome.twitterIconWithSize(40)
     // 下記でアイコンの色も変えられます
-     //trash.addAttribute(NSForegroundColorAttributeName, value: UIColor.whiteColor())
-    let twitterImage = twitter.imageWithSize(CGSizeMake(40, 40))
+     twittersquare.addAttribute(NSForegroundColorAttributeName, value: UIColor.blueColor())
+    let twittersquareImage = twittersquare.imageWithSize(CGSizeMake(40, 40))
     
-        TwitterView.image = twitterImage
+        TwitterView.image = twittersquareImage
 
     
     
@@ -139,11 +139,11 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
     
     
     
-        //ユーザーデフォルトから保存した配列を取り出す
-   // var myDefault = NSUserDefaults.standardUserDefaults()
-//        //ユーザーデフォルトを全削除する→一端削除するとコメントアウトする
- // var appDomain:String = NSBundle.mainBundle().bundleIdentifier!
-  //  myDefault.removePersistentDomainForName(appDomain)
+         //ユーザーデフォルトから保存した配列を取り出す
+        // var myDefault = NSUserDefaults.standardUserDefaults()
+        //ユーザーデフォルトを全削除する→一端削除するとコメントアウトする
+        // var appDomain:String = NSBundle.mainBundle().bundleIdentifier!
+        //  myDefault.removePersistentDomainForName(appDomain)
     
         // NavigationBarを隠す処理
         self.navigationController?.setNavigationBarHidden(true, animated: true)
@@ -507,7 +507,7 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
         // Dispose of any resources that can be recreated.
     }
     
-    
+    //ツイッター
     @IBAction func tapTwitter(sender: UITapGestureRecognizer) {
     var twitterVC = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
         
@@ -516,49 +516,41 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
         
         //タイトル
         strShare = "Title:\(diaryTitle.text!)\n"
-
         
         //内容
         for contentsHashEach in contentsHashTmp {
-        
-        
             strShare = strShare + "#\(contentsHashEach["contents"]!)\n"
-        
         }
-        
-                
             twitterVC.setInitialText(strShare)
             
-    twitterVC.addImage(UIImage(named: "sky.jp"))
+    twitterVC.addImage(camera.image)
     
     presentViewController(twitterVC, animated: true, completion: nil)
     }
     
-    //フェイスブック
-    @IBAction func tapFacebook(sender: UITapGestureRecognizer) {
-    var facebookVC = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
-        // シェアしたい文字列を格納する変数
-        var strShare = ""
-        
-        //タイトル
-        strShare = "Title:\(diaryTitle.text!)\n"
-        
-        
-        //内容
-        for contentsHashEach in contentsHashTmp {
-            
-            
-            strShare = strShare + "#\(contentsHashEach["contents"]!)\n"
-            
-        }
-        
-        facebookVC.setInitialText(strShare)
-        
-    facebookVC.addImage(UIImage(named: "sky.jp"))
-    
-    presentViewController(facebookVC, animated: true, completion: nil)
-
-}
+//    //フェイスブック
+//    @IBAction func tapFacebook(sender: UITapGestureRecognizer) {
+//    var facebookVC = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+//        // シェアしたい文字列を格納する変数
+//        var strShare = ""
+//        
+//        //タイトル
+//        strShare = "Title:\(diaryTitle.text!)\n"
+//        
+//        
+//        //内容
+//        for contentsHashEach in contentsHashTmp {
+//        strShare = strShare + "#\(contentsHashEach["contents"]!)\n"
+//            
+//        }
+//        
+//        facebookVC.setInitialText(strShare)
+//        
+//    facebookVC.addImage(camera.image)
+//    
+//    presentViewController(facebookVC, animated: true, completion: nil)
+//
+//}
 
 
     //タイトルのDONEボタンが押された時
