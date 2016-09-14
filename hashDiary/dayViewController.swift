@@ -110,12 +110,12 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
 //        FacebookView.image = facebookImage
     
     //twitter
-    let twittersquare = FAKFontAwesome.twitterIconWithSize(40)
+    let twitterSquare = FAKFontAwesome.twitterSquareIconWithSize(40)
     // 下記でアイコンの色も変えられます
-     twittersquare.addAttribute(NSForegroundColorAttributeName, value: UIColor.blueColor())
-    let twittersquareImage = twittersquare.imageWithSize(CGSizeMake(40, 40))
+     twitterSquare.addAttribute(NSForegroundColorAttributeName, value: UIColor.blueColor())
+    let twitterSquareImage = twitterSquare.imageWithSize(CGSizeMake(40, 40))
     
-        TwitterView.image = twittersquareImage
+        TwitterView.image = twitterSquareImage
 
     
     
@@ -140,10 +140,10 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
     
     
          //ユーザーデフォルトから保存した配列を取り出す
-        // var myDefault = NSUserDefaults.standardUserDefaults()
+        //var myDefault = NSUserDefaults.standardUserDefaults()
         //ユーザーデフォルトを全削除する→一端削除するとコメントアウトする
-        // var appDomain:String = NSBundle.mainBundle().bundleIdentifier!
-        //  myDefault.removePersistentDomainForName(appDomain)
+         //var appDomain:String = NSBundle.mainBundle().bundleIdentifier!
+          //myDefault.removePersistentDomainForName(appDomain)
     
         // NavigationBarを隠す処理
         self.navigationController?.setNavigationBarHidden(true, animated: true)
@@ -241,7 +241,7 @@ class dayViewController: UIViewController, UITableViewDataSource,  UITableViewDe
             let fetchResult: PHFetchResult = PHAsset.fetchAssetsWithALAssetURLs([url!], options: nil)
             let asset: PHAsset = fetchResult.firstObject as! PHAsset
             let manager: PHImageManager = PHImageManager()
-            manager.requestImageForAsset(asset,targetSize: CGSizeMake(5, 500),contentMode: .AspectFill,options: nil) { (image, info) -> Void in
+            manager.requestImageForAsset(asset,targetSize: CGSizeMake(5, 500),contentMode: .AspectFit,options: nil) { (image, info) -> Void in
                 self.camera.image = image
             }
         }

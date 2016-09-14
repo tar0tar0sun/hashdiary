@@ -59,6 +59,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        var iPadFlag = false
         
         //日付のフォント変え
         calendarBar.font = UIFont(name: "chalkboardSE-Bold", size: 50)
@@ -149,30 +150,34 @@ class ViewController: UIViewController {
             self.prevMonthButton.frame = CGRectMake(18, 468, CGFloat(calendarSize), CGFloat(calendarSize));
             self.nextMonthButton.frame = CGRectMake(348, 468, CGFloat(calendarSize), CGFloat(calendarSize));
         }else{
-            calendarLabelIntervalX = 15;
-            calendarLabelX         = 55;
+            var margin = Int((self.view.bounds.size.width - 624) / 2)
+            iPadFlag = true
+            
+            calendarLabelIntervalX = margin + 15;
+            calendarLabelX         = 85;
             calendarLabelY         = 95;
             calendarLabelWidth     = 55;
             calendarLabelHeight    = 25;
             calendarLableFontSize  = 18;
             
-            buttonRadius           = 25;
+            buttonRadius           = 40;
             
-            calendarIntervalX      = 18;
-            calendarX              = 55;
+            calendarIntervalX      = margin + 18;
+            calendarX              = 85;
             calendarIntervalY      = 125;
-            calendarY              = 55;
-            calendarSize           = 50;
+            calendarY              = 85;
+            calendarSize           = 80;
             calendarFontSize       = 21;
             
             self.prevMonthButton.frame = CGRectMake(18, 468, CGFloat(calendarSize), CGFloat(calendarSize));
             self.nextMonthButton.frame = CGRectMake(348, 468, CGFloat(calendarSize), CGFloat(calendarSize));
-            
         }
         
+        if(!iPadFlag){
         //ボタンを角丸にする
         prevMonthButton.layer.cornerRadius = CGFloat(buttonRadius)
         nextMonthButton.layer.cornerRadius = CGFloat(buttonRadius)
+        }
         
         //現在の日付を取得する
         now = NSDate()
@@ -359,14 +364,16 @@ class ViewController: UIViewController {
         //UIColor(red: 0, green: 0, blue: 1.0, alpha: 1.0)
         //アプリ画面背景色：青        
         if month % 2 == 0{
-            backGroundcolor = UIColor(red: CGFloat(0.500), green: CGFloat(0.700), blue: CGFloat(1.990), alpha: CGFloat(9.000))
+            backGroundcolor = UIColor(red: CGFloat(0.400), green: CGFloat(0.700), blue: CGFloat(1.990), alpha: CGFloat(9.000))
         }
         else
         {
-            backGroundcolor = UIColor(red: CGFloat(0.400), green: CGFloat(0.800), blue: CGFloat(1.990), alpha: CGFloat(9.000))
+            backGroundcolor = UIColor(red: CGFloat(0.400), green: CGFloat(0.800), blue: CGFloat(1.999), alpha: CGFloat(9.000))
         }
         
         self.view.backgroundColor = backGroundcolor
+        
+        calendarBar.backgroundColor = backGroundcolor  
         
 
     }

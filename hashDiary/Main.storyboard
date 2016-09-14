@@ -31,7 +31,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wII-sV-LBg">
-                                <rect key="frame" x="5" y="471" width="40" height="40"/>
+                                <rect key="frame" x="5" y="478" width="40" height="40"/>
                                 <color key="backgroundColor" red="0.40784313729999999" green="0.63529411759999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="aCw-YO-OIP"/>
@@ -47,7 +47,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AT1-Bb-NnH">
-                                <rect key="frame" x="275" y="471" width="40" height="40"/>
+                                <rect key="frame" x="275" y="478" width="40" height="40"/>
                                 <color key="backgroundColor" red="0.40784313729999999" green="0.63529411759999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="yKq-G4-EXa"/>
@@ -70,7 +70,7 @@
                             <constraint firstItem="wII-sV-LBg" firstAttribute="top" secondItem="AT1-Bb-NnH" secondAttribute="top" id="J1w-4c-UPh"/>
                             <constraint firstItem="wII-sV-LBg" firstAttribute="baseline" secondItem="AT1-Bb-NnH" secondAttribute="firstBaseline" id="MVS-2I-10I"/>
                             <constraint firstItem="wII-sV-LBg" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-11" id="N1C-2C-wV7"/>
-                            <constraint firstItem="Bkp-tk-aWe" firstAttribute="top" secondItem="wII-sV-LBg" secondAttribute="bottom" constant="57" id="WeS-FN-e45"/>
+                            <constraint firstItem="Bkp-tk-aWe" firstAttribute="top" secondItem="wII-sV-LBg" secondAttribute="bottom" constant="50" id="WeS-FN-e45"/>
                             <constraint firstAttribute="trailingMargin" secondItem="B5a-7P-bLg" secondAttribute="trailing" constant="4" id="dYz-Lg-teJ"/>
                             <constraint firstItem="B5a-7P-bLg" firstAttribute="top" secondItem="wcR-n1-lNG" secondAttribute="bottom" id="veE-Bb-WjB"/>
                             <constraint firstItem="AT1-Bb-NnH" firstAttribute="baseline" secondItem="wII-sV-LBg" secondAttribute="firstBaseline" id="yYD-5e-9WN"/>
@@ -134,9 +134,12 @@
                                     <constraint firstAttribute="height" constant="13" id="iAf-63-D1r"/>
                                 </constraints>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="51" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1wE-Bj-kw7">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="51" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1wE-Bj-kw7">
                                 <rect key="frame" x="0.0" y="149" width="320" height="207"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="207" id="gZz-OM-3Is"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="hashcell" rowHeight="51" id="lqC-mN-3gd" customClass="hashTableViewCell" customModule="hashDiary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="51"/>
@@ -183,7 +186,7 @@
                                     <outlet property="delegate" destination="dRz-hn-eED" id="HnK-se-GK1"/>
                                 </connections>
                             </tableView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="hasen.png" translatesAutoresizingMaskIntoConstraints="NO" id="rZy-xG-8vT">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hasen.png" translatesAutoresizingMaskIntoConstraints="NO" id="rZy-xG-8vT">
                                 <rect key="frame" x="7" y="369" width="304" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16" id="yDQ-va-GQw"/>
@@ -228,14 +231,18 @@
                                     <outletCollection property="gestureRecognizers" destination="KhG-q7-9xq" appends="YES" id="HIg-TO-eJw"/>
                                 </connections>
                             </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2MB-Wn-TKs">
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2MB-Wn-TKs">
                                 <rect key="frame" x="14" y="393" width="165" height="165"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="165" id="Zfg-fB-1wT"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="165" id="fxu-S6-aEi"/>
+                                </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="2rb-Le-YJm" appends="YES" id="Hct-pK-hlo"/>
                                 </connections>
                             </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CXN-uV-WGC" userLabel="Twitter share">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CXN-uV-WGC" userLabel="Twitter share">
                                 <rect key="frame" x="229" y="449" width="53" height="53"/>
                                 <gestureRecognizers/>
                                 <constraints>

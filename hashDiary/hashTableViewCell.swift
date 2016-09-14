@@ -41,9 +41,14 @@ class hashTableViewCell: UITableViewCell,UITextFieldDelegate
         // ボタンビュー作成
 //   var myKeyboard = UIView(frame: CGRectMake(0, 0, 320, 40))
 //   myKeyboard.backgroundColor = UIColor.darkGrayColor()
+//        var cell = contentText.superview?.superview
+//        var tableView = cell!.superview?.superview as! UITableView
+//        
+//        var dayVC = tableView.delegate as! dayViewController
+//        
         
         // Doneボタン作成
-        var myButton2 = UIButton(frame: CGRectMake(205, 5, 80, 30))
+        var myButton2 = UIButton(frame: CGRectMake(contentText.frame.width, 5, 80, 30))
         myButton2.backgroundColor = UIColor.lightGrayColor()
         myButton2.setTitle("Done", forState: UIControlState.Normal)
         myButton2.addTarget(self, action: "onMyButton2", forControlEvents: UIControlEvents.TouchUpInside)
