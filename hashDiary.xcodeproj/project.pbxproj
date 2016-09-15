@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4914FFE91D61A1280054970E /* CalculateCalendarLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4914FFE81D61A1280054970E /* CalculateCalendarLogic.swift */; };
+		491A79001D8A850E00765318 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 491A78FF1D8A850E00765318 /* Launch Screen.storyboard */; };
 		493396721D7FDAB8002B8A0E /* FontAwesomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 493396711D7FDAB8002B8A0E /* FontAwesomeKit.framework */; };
 		493396741D7FEFA7002B8A0E /* hash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 493396731D7FEFA7002B8A0E /* hash.jpg */; };
 		493D010D1D62DB1D007676CB /* dayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493D010C1D62DB1D007676CB /* dayViewController.swift */; };
@@ -50,6 +51,7 @@
 		14FC971DFF3308609A2EB168 /* Pods-hashDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hashDiary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hashDiary/Pods-hashDiary.debug.xcconfig"; sourceTree = "<group>"; };
 		32AA6185CF2E36F5CF599952 /* Pods-hashDiaryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hashDiaryUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hashDiaryUITests/Pods-hashDiaryUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4914FFE81D61A1280054970E /* CalculateCalendarLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculateCalendarLogic.swift; sourceTree = "<group>"; };
+		491A78FF1D8A850E00765318 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		493396711D7FDAB8002B8A0E /* FontAwesomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FontAwesomeKit.framework; path = "Pods/../build/Debug-iphoneos/FontAwesomeKit/FontAwesomeKit.framework"; sourceTree = "<group>"; };
 		493396731D7FEFA7002B8A0E /* hash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hash.jpg; sourceTree = "<group>"; };
 		493D010C1D62DB1D007676CB /* dayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dayViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				4969C4EE1D5DA94D00782FE6 /* AppDelegate.swift */,
 				4914FFE81D61A1280054970E /* CalculateCalendarLogic.swift */,
 				4969C51C1D5DB15600782FE6 /* DeviseSize.swift */,
+				491A78FF1D8A850E00765318 /* Launch Screen.storyboard */,
 			);
 			path = hashDiary;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				49A04D141D81496900CF4AE8 /* hasen.png in Resources */,
 				49567E931D61A5C900C1F6CC /* Main.storyboard in Resources */,
 				4969C4F61D5DA94D00782FE6 /* Assets.xcassets in Resources */,
+				491A79001D8A850E00765318 /* Launch Screen.storyboard in Resources */,
 				49A04D121D8126C700CF4AE8 /* save.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
