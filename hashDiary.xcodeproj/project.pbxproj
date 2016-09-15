@@ -15,7 +15,6 @@
 		4969C4EF1D5DA94D00782FE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4969C4EE1D5DA94D00782FE6 /* AppDelegate.swift */; };
 		4969C4F11D5DA94D00782FE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4969C4F01D5DA94D00782FE6 /* ViewController.swift */; };
 		4969C4F61D5DA94D00782FE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4969C4F51D5DA94D00782FE6 /* Assets.xcassets */; };
-		4969C4F91D5DA94D00782FE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4969C4F71D5DA94D00782FE6 /* LaunchScreen.storyboard */; };
 		4969C5041D5DA94D00782FE6 /* hashDiaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4969C5031D5DA94D00782FE6 /* hashDiaryTests.swift */; };
 		4969C50F1D5DA94D00782FE6 /* hashDiaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4969C50E1D5DA94D00782FE6 /* hashDiaryUITests.swift */; };
 		4969C51D1D5DB15600782FE6 /* DeviseSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4969C51C1D5DB15600782FE6 /* DeviseSize.swift */; };
@@ -59,7 +58,6 @@
 		4969C4EE1D5DA94D00782FE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4969C4F01D5DA94D00782FE6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		4969C4F51D5DA94D00782FE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4969C4F81D5DA94D00782FE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4969C4FA1D5DA94D00782FE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4969C4FF1D5DA94D00782FE6 /* hashDiaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hashDiaryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4969C5031D5DA94D00782FE6 /* hashDiaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hashDiaryTests.swift; sourceTree = "<group>"; };
@@ -154,7 +152,6 @@
 				49B583771D76B3E700F7531C /* searchViewController.swift */,
 				49567E921D61A5C900C1F6CC /* Main.storyboard */,
 				4969C4F51D5DA94D00782FE6 /* Assets.xcassets */,
-				4969C4F71D5DA94D00782FE6 /* LaunchScreen.storyboard */,
 				4969C4FA1D5DA94D00782FE6 /* Info.plist */,
 				4969C4F01D5DA94D00782FE6 /* ViewController.swift */,
 				4969C4EE1D5DA94D00782FE6 /* AppDelegate.swift */,
@@ -325,7 +322,6 @@
 				49A022FD1D7EA44A00F6C5DB /* zocial-regular-webfont.ttf in Resources */,
 				49A04D141D81496900CF4AE8 /* hasen.png in Resources */,
 				49567E931D61A5C900C1F6CC /* Main.storyboard in Resources */,
-				4969C4F91D5DA94D00782FE6 /* LaunchScreen.storyboard in Resources */,
 				4969C4F61D5DA94D00782FE6 /* Assets.xcassets in Resources */,
 				49A04D121D8126C700CF4AE8 /* save.png in Resources */,
 			);
@@ -516,17 +512,6 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		4969C4F71D5DA94D00782FE6 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4969C4F81D5DA94D00782FE6 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		4969C5111D5DA94D00782FE6 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -616,6 +601,7 @@
 			baseConfigurationReference = 14FC971DFF3308609A2EB168 /* Pods-hashDiary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -640,6 +626,7 @@
 			baseConfigurationReference = 54F9D86F705C191DA5229644 /* Pods-hashDiary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

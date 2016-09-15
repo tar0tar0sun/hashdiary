@@ -48,7 +48,7 @@ class hashTableViewCell: UITableViewCell,UITextFieldDelegate
 //        
         
         // Doneボタン作成
-        var myButton2 = UIButton(frame: CGRectMake(contentText.frame.width, 5, 80, 30))
+        var myButton2 = UIButton(frame: CGRectMake(100, 5, 80, 30))
         myButton2.backgroundColor = UIColor.lightGrayColor()
         myButton2.setTitle("Done", forState: UIControlState.Normal)
         myButton2.addTarget(self, action: "onMyButton2", forControlEvents: UIControlEvents.TouchUpInside)
